@@ -15,7 +15,7 @@ const config: Config = {
       },
       colors: {
         'gray-1': '#333333',
-        'mirage-black': '#101720♠'
+        'mirage-black': '#101720'
       },
       fontFamily: {
         neue: ['var(--font-neue)']

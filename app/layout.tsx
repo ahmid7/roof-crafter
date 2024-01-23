@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ neueMontreal.variable }`}>{children}</body>
+      <body className={`bg-red-900 h-screen w-screen ${ neueMontreal.variable }`}>{children}</body>
     </html>
   );
 }
