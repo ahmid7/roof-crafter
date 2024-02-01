@@ -16,3 +16,6 @@
   @apply mx-auto px-10;
 }
 
+* {
+  @apply font-neue
+}

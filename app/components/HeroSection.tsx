@@ -20,35 +20,41 @@ function HeroSection() {
           <ContactForm extraInfo />
         </div>
 
-        <div className="flex items-center justify-between pr-8">
-          <p className=" text-xl leading-8 -tracking-[1.5%]">These brands trust us</p>
+        <div className="pr-8">
+          <div className="flex items-center justify-between">
+            <p className=" text-xl leading-8 -tracking-[1.5%]">
+              These brands trust us
+            </p>
 
-          <div className="flex items-center">
-            <div className="relative w-[140px] h-[56px]">
-              <Image
-                className="w-fit h-fit"
-                fill
-                alt="webflow"
-                priority
-                quality={100}
-                src="/assets/images/webflow.png"
-              />
-            </div>
+            <div className="flex items-center">
+              <div className="relative w-[140px] h-[56px]">
+                <Image
+                  className="w-fit h-fit"
+                  fill
+                  alt="webflow"
+                  priority
+                  quality={100}
+                  src="/assets/images/webflow.png"
+                />
+              </div>
 
-            <div className="relative w-[140px] h-[56px]">
-              <Image
-                alt="relume"
-                className="w-fit h-fit"
-                priority
-                quality={100}
-                src="/assets/images/relume.png"
-                fill
-              />
+              <div className="relative w-[140px] h-[56px]">
+                <Image
+                  alt="relume"
+                  className="w-fit h-fit"
+                  priority
+                  quality={100}
+                  src="/assets/images/relume.png"
+                  fill
+                />
+              </div>
             </div>
           </div>
 
           <div className="mt-[39px] ">
-            <span className="text-lg font-medium text-mirage-black">Scroll Down </span>
+            <span className="text-lg font-medium text-mirage-black">
+              Scroll Down{" "}
+            </span>
           </div>
         </div>
       </div>
@@ -63,7 +69,19 @@ function HeroSection() {
             className="w-full h-full object-cover"
             alt="roofing-image"
           />
-          <div></div>
+
+          <div className="absolute bottom-0 left-0 py-8 px-10 bg-[#1017204D]  w-full blur-[30%]">
+            <div className="space-y-12 text-white ">
+              <div>
+                <h5 className="text-2xl font-bold leading-[33.6px] -tracking-[1.5%]">heading</h5>
+                <p className="text-base leading-6 -tracking-[0.5%]">todo</p>
+              </div>
+
+              <div>
+                
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

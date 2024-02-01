@@ -20,6 +20,11 @@ const neueMontreal = localFont({
       weight: '400',
       style: 'normal'
     },
+    {
+      path: "./fonts/NeueMontreal-Medium.otf",
+      weight: "500",
+      style: "normal"
+    }
   ],
   variable: '--font-neue'
 })
