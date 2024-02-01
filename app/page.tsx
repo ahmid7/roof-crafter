@@ -1,5 +1,7 @@
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
+import Services from "./components/Services";
+import RecentProject from "./components/RecentProject";
 
 
 export default function Home() {
@@ -8,6 +10,8 @@ export default function Home() {
     <main className="font-bold text-3xl">
       <Header />
       <HeroSection />
+      <Services />
+      <RecentProject />
     </main>
   );
 }
