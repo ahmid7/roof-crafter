@@ -9,35 +9,6 @@ type ReviewProps = {
   imageSrc: string;
 };
 
-const Review = ({ paragraph, name, titleHeld, imageSrc }: ReviewProps) => {
-  return (
-    <div className="py-8 space-y-6 text-mirage-black">
-      <Stars />
-
-      <p className="font-normal text-lg leading-[27px] -tracking-[0.5%]">
-        {paragraph}
-      </p>
-
-      <div className="flex items-center gap-x-5">
-        <div className="relative w-14 h-14 rounded-full">
-          <Image
-            src={imageSrc}
-            alt="customer-image"
-            fill
-            quality={100}
-            priority
-          />
-        </div>
-
-        <div className="text-base [&_>]:leading-6 [&_>]:-tracking-[0.05%]">
-          <p className="font-medium">{name}</p>
-          <span className="font-normal">{titleHeld}</span>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const ReviewsData = [
   {
     paragraph:
@@ -68,6 +39,35 @@ const ReviewsData = [
     imageSrc: "/assets/images/AvatarImage.png",
   },
 ];
+
+const Review = ({ paragraph, name, titleHeld, imageSrc }: ReviewProps) => {
+  return (
+    <div className="py-8 space-y-6 text-mirage-black">
+      <Stars />
+
+      <p className="font-normal text-lg leading-[27px] -tracking-[0.5%]">
+        {paragraph}
+      </p>
+
+      <div className="flex items-center gap-x-5">
+        <div className="relative w-14 h-14 rounded-full">
+          <Image
+            src={imageSrc}
+            alt="customer-image"
+            fill
+            quality={100}
+            priority
+          />
+        </div>
+
+        <div className="text-base [&_>]:leading-6 [&_>]:-tracking-[0.05%]">
+          <p className="font-medium">{name}</p>
+          <span className="font-normal">{titleHeld}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 function CustomerReview() {
   return (

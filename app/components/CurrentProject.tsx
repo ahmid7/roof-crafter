@@ -61,7 +61,7 @@ function CurrentProject() {
         />
       </div>
 
-      <div className='px-6 between pb-[45px] xl:pb-[60px]'>
+      <div className='px-6 between'>
         <div className='[&_span]:w-2 [&_span]:h-2 [&_span]:rounded-full [&_span]:bg-[#E0E0E0] flex gap-x-2'>
           <span></span>
           <span></span>
