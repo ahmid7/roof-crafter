@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import Services from "./components/Services";
 import RecentProject from "./components/RecentProject";
 import CustomerReview from "./components/CustomerReview";
+import Faqs from "./components/Faqs";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Services />
       <RecentProject />
       <CustomerReview />
+      <Faqs />
     </main>
   );
 }
