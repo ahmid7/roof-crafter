@@ -4,7 +4,7 @@ import { LineDownward, LineTop } from "./svgs";
 
 function Services() {
   return (
-    <section className="px-8 xl:px-10">
+    <section className="px-8 xl:px-10 pt-[60px]">
       <div className="">
         <div className="flex gap-x-8 xl:gap-x-10 items-start">
           <h2 className="font-medium text-4xl xl:text-[50px] leading-[50px] xl:leading-[67.2px] -tracking-[1.5%] basis-[45%]">

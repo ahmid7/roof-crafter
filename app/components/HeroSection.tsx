@@ -1,10 +1,12 @@
 import React from "react";
+import Header from "./Header";
 import ContactForm from "./ContactForm";
 import Image from "next/image";
 
 function HeroSection() {
   return (
     <section className="flex">
+      <Header />
       <div className="space-y-11 xl:space-y-[60px] pt-24 xl:pt-[114px] basis-1/2 pl-8 xl:pl-10">
         <div className="space-y-5 xl:space-y-6 pr-16 xl:pr-[87px]">
           <h2 className="header-style1">

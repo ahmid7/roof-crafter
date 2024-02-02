@@ -1,10 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 
-
 function Header() {
   return (
-    <header className='between container-spacing absolute px-8 xl:px-10 top-0 left-0 w-full py-3 z-10'>
+    <header className='between container-spacing px-8 xl:px-10 fixed top-0 left-0 w-full py-3 z-10'>
       <nav>
         <ul className='between gap-x-5 xl:gap-x-8 text-mirage-black leading-6 text-base -tracking-[0.08px] '>
           <li>Home</li>

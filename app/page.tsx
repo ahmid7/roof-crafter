@@ -11,7 +11,6 @@ export default function Home() {
 
   return (
     <main className="font-bold text-3xl space-y-[60px] xl:space-y-[60px]">
-      <Header />
       <HeroSection />
       <Services />
       <RecentProject />
