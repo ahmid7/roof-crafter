@@ -10,12 +10,28 @@
   .between {
     @apply flex items-center justify-between
   }
-}
 
-.container-spacing {
-  @apply mx-auto px-10;
+  .start-center {
+    @apply flex items-center justify-start
+  }
+
+  .start {
+    @apply flex justify-start
+  }
 }
 
 * {
   @apply font-neue
+}
+
+.header-style1 {
+  @apply text-4xl xl:text-[56px] text-black font-bold -tracking-[1.5%] leading-[120%]
+}
+
+.paragraph-style1 {
+  @apply text-lg xl:text-xl leading-[26px] xl:leading-[30px] -tracking-[0.5%] font-normal
+}
+
+.paragraph-style2 {
+  @apply text-base xl:text-lg font-normal leading-5 xl:leading-[27px]
 }

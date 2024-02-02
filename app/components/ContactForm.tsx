@@ -41,14 +41,13 @@ const Input: React.FC<Input> = ({
 
 function ContactForm({ extraInfo, dark }: ContactForm) {
   return (
-    <section className="space-y-10">
+    <section className="space-y-8 xl:space-y-10">
       <Input
         type="text"
         name="FullName"
         label="Full Name"
         inputStyle={`${dark ? "" : "text-[#333333]"}`}
         labelStyle={`${dark ? "" : "border-[#101720]"}`}
-        
       />
 
       <Input
@@ -75,12 +74,12 @@ function ContactForm({ extraInfo, dark }: ContactForm) {
         )}
       </div>
 
-      <button className="flex items-center gap-x-6 py-5 px-8 outline outline-1 outline-mirage-black rounded-[32px]">
-        <span className="font-medium text-xl leading-[17.9px] text-mirage-black">
+      <button className="flex items-center gap-x-4 xl:gap-x-6 py-4 px-6 xl:py-5 xl:px-8 outline outline-1 outline-mirage-black rounded-[32px]">
+        <span className="font-medium text-base xl:text-xl leading-[17.9px] text-mirage-black">
           Get a free inspection
         </span>
 
-        <span className="">
+        <span className="stroke-black">
           <ArrowRight />
         </span>
       </button>
