@@ -28,6 +28,10 @@
   @apply text-4xl xl:text-[56px] text-black font-bold -tracking-[1.5%] leading-[120%]
 }
 
+.header-style2 {
+  @apply font-medium text-4xl xl:text-[40px] -tracking-[1.5%] leading-10 xl:leading-[48px]
+}
+
 .paragraph-style1 {
   @apply text-lg xl:text-xl leading-[26px] xl:leading-[30px] -tracking-[0.5%] font-normal
 }

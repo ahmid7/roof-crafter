@@ -23,7 +23,7 @@ function Services() {
         <div className="overflow-hidden mt-9 xl:mt-[47px]">
           <LineTop />
 
-          <div className="relative h-[1000px] xl:h-[1246px] gap-x-[50px] xl:gap-x-[80px] flex">
+          <div className="relative h-[850px] xl:h-[1246px] gap-x-[50px] xl:gap-x-[80px] flex">
             <div className="basis-[65%] xl:basis-[36%]" />
 
             <div className=" flex gap-x-16 xl:gap-x-[111px]">
