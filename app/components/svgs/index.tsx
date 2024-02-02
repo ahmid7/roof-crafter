@@ -86,8 +86,9 @@ export const Stars = () => (
 
 export const ButtonLeft = () => (
   <svg
-    width="48"
-    height="49"
+    // width="48"
+    // height="49"
+    className="w-10 h-[41px] xl:w-[48px] xl:h-[49px]"
     viewBox="0 0 48 49"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -109,8 +110,9 @@ export const ButtonLeft = () => (
 
 export const ButtonRight = () => (
   <svg
-    width="48"
-    height="49"
+    // width="48"
+    // height="49"
+    className="w-10 h-[41px] xl:w-[48px] xl:h-[49px]"
     viewBox="0 0 48 49"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

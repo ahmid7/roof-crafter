@@ -4,21 +4,21 @@ import Image from "next/image"
 
 function CurrentProject() {
   return (
-    <section className='pt-[60px] '>
+    <section className='pt-[50px] xl:pt-[60px] '>
       <div className="text-center">
-        <h2 className=" font-medium text-[40px] -tracking-[1.5%] leading-[48px]">
+        <h2 className="header-style2">
         What we have been up to
         </h2>
-        <p className="font-normal text-xl leading-[30px] -tracking-[0.5%] pt-5 pb-12">
+        <p className="paragraph-style1 pt-3 xl:pt-5 pb-10 xl:pb-12">
           Take a look at our recent roofing projects.
         </p>
       </div>
 
-      <div className='pt-[80px]'>
-        <div className='flex items-start gap-x-20 justify-between'>
-          <div className='space-y-6'>
-            <h1 className='font-bold text-[56px] leading-[67.2px] -tracking-[1.5%] '>Project T</h1>
-            <p className='font-normal text-lg leading-[27px] -tracking-[0.5%]'>Project T involved the meticulous installation of a cutting-edge cool roof system, enhancing energy efficiency and reducing cooling costs.</p>
+      <div className='pt-[50px] xl:pt-20'>
+        <div className='between-start gap-x-16 xl:gap-x-20'>
+          <div className='space-y-4 xl:space-y-6'>
+            <h1 className='header-style2'>Project T</h1>
+            <p className='paragraph-style2 -tracking-[0.5%]'>Project T involved the meticulous installation of a cutting-edge cool roof system, enhancing energy efficiency and reducing cooling costs.</p>
 
             <div className='font-normal text-sm [&_span]:leading-[21px] [&_span]:rounded-[20px] space-x-2'>
               <span className='bg-[#EDF1FC] text-[#1A3AA9] px-2 py-1'>Eco-friendly Roofing</span>
@@ -26,7 +26,7 @@ function CurrentProject() {
             </div>
           </div>
 
-          <div className='basis-[464px] grid grid-cols-2 gap-y-8 text-base [&_p]:font-bold [&_p]:leading-6 [&_p]:-tracking-[0.05%] [&_small]:font-normal [&_small]:leading-6 [&_small]:-tracking-[0.5%] [&_p]:pb-2'>
+          <div className='basis-[464px] grid grid-cols-2 gap-y-6 xl:gap-y-8 text-sm xl:text-base [&_p]:font-bold [&_p]:leading-5 [&_p]:xl:leading-6 [&_p]:-tracking-[0.05%] [&_small]:font-normal [&_small]:leading-5 [&_small]:xl:leading-6 [&_small]:-tracking-[0.5%] [&_p]:pb-1 [&_p]:xl:pb-2'>
             <div>
               <p>Client</p>
               <small className=''>John Smith</small>
@@ -50,7 +50,7 @@ function CurrentProject() {
         </div>
       </div>
 
-      <div className='my-20 relative w-full h-[600px]'>
+      <div className='my-16 xl:my-20 relative w-full h-[550px] xl:h-[600px]'>
         <Image
           alt='project-image'
           className="object-cover"
@@ -61,7 +61,7 @@ function CurrentProject() {
         />
       </div>
 
-      <div className='px-6 flex justify-between item-center pb-[60px]'>
+      <div className='px-6 between pb-[45px] xl:pb-[60px]'>
         <div className='[&_span]:w-2 [&_span]:h-2 [&_span]:rounded-full [&_span]:bg-[#E0E0E0] flex gap-x-2'>
           <span></span>
           <span></span>
