@@ -42,15 +42,15 @@ const ReviewsData = [
 
 const Review = ({ paragraph, name, titleHeld, imageSrc }: ReviewProps) => {
   return (
-    <div className="py-8 space-y-6 text-mirage-black">
+    <div className="py-5 xl:py-8 space-y-4 xl:space-y-6 text-mirage-black">
       <Stars />
 
-      <p className="font-normal text-lg leading-[27px] -tracking-[0.5%]">
+      <p className="paragraph-style2 -tracking-[0.5%]">
         {paragraph}
       </p>
 
-      <div className="flex items-center gap-x-5">
-        <div className="relative w-14 h-14 rounded-full">
+      <div className="flex items-center gap-x-3 xl:gap-x-5">
+        <div className="relative w-10 h-10 xl:w-14 xl:h-14 rounded-full">
           <Image
             src={imageSrc}
             alt="customer-image"
@@ -60,7 +60,7 @@ const Review = ({ paragraph, name, titleHeld, imageSrc }: ReviewProps) => {
           />
         </div>
 
-        <div className="text-base [&_>]:leading-6 [&_>]:-tracking-[0.05%]">
+        <div className="text-sm xl:text-base [&_>]:leading-6 [&_>]:-tracking-[0.05%]">
           <p className="font-medium">{name}</p>
           <span className="font-normal">{titleHeld}</span>
         </div>
@@ -71,13 +71,13 @@ const Review = ({ paragraph, name, titleHeld, imageSrc }: ReviewProps) => {
 
 function CustomerReview() {
   return (
-    <section className=" px-10">
+    <section className="px-8 xl:px-10">
       <div className="text-center">
-        <h2 className="font-medium text-mirage-black text-[40px] -tracking-[1.5%] leading-[48px]">
+        <h2 className="header-style2">
           Hey, don’t just take our word for it
         </h2>
 
-        <p className="font-normal text-xl leading-[30px] -tracking-[0.5%] pt-5 pb-[75px]">
+        <p className="paragraph-style1 pt-3 xl:pt-5 pb-12 xl:pb-[75px]">
           Read how much our customers appreciate our roofs
         </p>
       </div>
@@ -86,7 +86,7 @@ function CustomerReview() {
         <div className="flex items-start flex-nowrap gap-x-8">
           {ReviewsData.map((review, index) => {
             return (
-              <div className="min-w-[600px]" key={index + 10}>
+              <div className="min-w-[500px] xl:min-w-[600px]" key={index + 10}>
                 <Review
                   paragraph={review.paragraph}
                   name={review.name}
@@ -99,7 +99,7 @@ function CustomerReview() {
         </div>
       </div>
 
-      <div className="mt-12 flex justify-between items-center">
+      <div className="mt-9 xl:mt-12 flex justify-between items-center">
         <div className="[&_span]:w-2 [&_span]:h-2 [&_span]:rounded-full [&_span]:bg-[#E0E0E0] flex gap-x-2">
           <span></span>
           <span></span>

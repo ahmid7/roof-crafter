@@ -41,5 +41,5 @@
 }
 
 .paragraph-style2 {
-  @apply text-base xl:text-lg font-normal leading-5 xl:leading-[27px]
+  @apply text-base xl:text-lg font-normal leading-6 xl:leading-[27px]
 }
