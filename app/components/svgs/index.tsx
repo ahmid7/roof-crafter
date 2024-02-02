@@ -175,8 +175,9 @@ export const RightReservedIcon = () => (
 
 export const Logo = () => (
   <svg
-    width="198"
-    height="37"
+    // width="198"
+    // height="37"
+    className="w-[150px] h-[32px] xl:w-[198px] xl:h-[37px]"
     viewBox="0 0 198 37"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

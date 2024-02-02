@@ -71,7 +71,7 @@ const Review = ({ paragraph, name, titleHeld, imageSrc }: ReviewProps) => {
 
 function CustomerReview() {
   return (
-    <section className="px-8 xl:px-10">
+    <section className="px-8 xl:px-10 pb-[60px]">
       <div className="text-center">
         <h2 className="header-style2">
           Hey, don’t just take our word for it
