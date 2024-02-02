@@ -6,17 +6,17 @@ function HeroSection() {
   return (
     <section className="flex font-neue">
       <div className="space-y-6 pt-[114px] basis-1/2 pl-10">
-        <h2 className="text-[56px] text-black font-bold -tracking-[1.5%] leading-[120%] pr-10">
+        <h2 className="text-[56px] text-black font-bold -tracking-[1.5%] leading-[120%] pr-[87px]">
           Trusted Roofing Services for Your Home
         </h2>
 
-        <p className="text-xl leading-[30px] -tracking-[0.5%] font-normal pr-10">
+        <p className="text-xl leading-[30px] -tracking-[0.5%] font-normal pr-[87px]">
           Protect your home with our reliable and professional roofing services.
           We offer roof repair, replacement, installation, emergency roofing,
           and more.
         </p>
 
-        <div className="pr-10">
+        <div className="pr-[87px]">
           <ContactForm extraInfo />
         </div>
 
