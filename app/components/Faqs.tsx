@@ -93,6 +93,7 @@ function Faqs() {
       <div className="grid grid-cols-3 gap-x-5 xl:gap-x-8 gap-y-12 xl:gap-y-16 pt-12 xl:pt-16">
         {FAQsData.map((data, index) => (
           <Question
+            key={ data.question + index }
             image={data.image}
             question={data.question}
             answer={data.answer}

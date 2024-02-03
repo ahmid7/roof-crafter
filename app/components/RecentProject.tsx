@@ -58,9 +58,8 @@ function RecentProject() {
 
       <div className="grid grid-cols-2 gap-y-10 xl:gap-y-12 gap-x-8 xl:gap-x-10">
         {services.map((service, index) => (
-          <div className ={`${ index == 0 ? 'col-span-2 border-2 border-solid border-green-900' : 'border-2 border-solid border-red-900' }`}>
+          <div key={ service.title + index } className ={`${ index == 0 ? 'col-span-2 border-2 border-solid border-green-900' : 'border-2 border-solid border-red-900' }`}>
             <Card
-              key={service.title}
               title={service.title}
               paragraph={service.paragraph}
               imageSrc={service.imageSrc}
