@@ -1,7 +1,9 @@
 import React from "react";
+import Image from "next/image";
+
 import Header from "./Header";
 import ContactForm from "./ContactForm";
-import Image from "next/image";
+import { ButtonLeft, ButtonRight } from "./svgs";
 
 function HeroSection() {
   return (
@@ -19,7 +21,7 @@ function HeroSection() {
             roofing, and more.
           </p>
 
-          <ContactForm extraInfo />
+          <ContactForm extraInfo  dark={ false }/>
         </div>
 
         <div className="pr-8">
@@ -73,7 +75,7 @@ function HeroSection() {
           />
 
           <div className="absolute bottom-0 left-0 py-8 px-10 bg-[#1017204D]  w-full blur-[30%]">
-            <div className="space-y-12 text-white ">
+            <div className="space-y-9 xl:space-y-12 text-white ">
               <div>
                 <h5 className="text-2xl font-bold leading-[33.6px] -tracking-[1.5%]">
                   heading
@@ -81,7 +83,20 @@ function HeroSection() {
                 <p className="text-base leading-6 -tracking-[0.5%]">todo</p>
               </div>
 
-              <div></div>
+              <div className="between">
+                <div className="[&_span]:w-2 [&_span]:h-2 [&_span]:rounded-full [&_span]:bg-[#E0E0E0] flex gap-x-2">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <div className="gap-x-[15px] flex items-center text-white">
+                  <ButtonLeft />
+
+                  <ButtonRight />
+                </div>
+              </div>
             </div>
           </div>
         </div>

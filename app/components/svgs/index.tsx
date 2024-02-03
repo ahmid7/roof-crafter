@@ -88,7 +88,7 @@ export const ButtonLeft = () => (
   <svg
     // width="48"
     // height="49"
-    className="w-10 h-[41px] xl:w-[48px] xl:h-[49px]"
+    className="w-10 h-[41px] xl:w-[48px] xl:h-[49px] text-inherit"
     viewBox="0 0 48 49"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -99,11 +99,11 @@ export const ButtonLeft = () => (
       width="47"
       height="47"
       rx="23.5"
-      stroke="#101720"
+      className="stroke-current text-inherit "
     />
     <path
       d="M32 23.8889H19.83L25.42 18.2989L24 16.8889L16 24.8889L24 32.8889L25.41 31.4789L19.83 25.8889H32V23.8889Z"
-      fill="#101720"
+      className="fill-current text-inherit"
     />
   </svg>
 );
@@ -112,7 +112,7 @@ export const ButtonRight = () => (
   <svg
     // width="48"
     // height="49"
-    className="w-10 h-[41px] xl:w-[48px] xl:h-[49px]"
+    className="w-10 h-[41px] xl:w-[48px] xl:h-[49px] text-inherit"
     viewBox="0 0 48 49"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -123,11 +123,11 @@ export const ButtonRight = () => (
       width="47"
       height="47"
       rx="23.5"
-      stroke="#101720"
+      className="text-inherit stroke-current"
     />
     <path
       d="M24 16.8889L22.59 18.2989L28.17 23.8889H16V25.8889H28.17L22.59 31.4789L24 32.8889L32 24.8889L24 16.8889Z"
-      fill="#101720"
+      className="text-inherit fill-current"
     />
   </svg>
 );

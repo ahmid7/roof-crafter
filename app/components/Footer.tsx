@@ -50,7 +50,7 @@ function Footer() {
           </div>
 
           <div>
-            <ContactForm />
+            <ContactForm dark/>
           </div>
         </div>
 
