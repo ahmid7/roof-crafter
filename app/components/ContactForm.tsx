@@ -27,7 +27,7 @@ const Input: React.FC<Input> = ({
         {label}
       </label>
       <input
-        className={`outline-none bg-transparent focus:border-b border-b border-solid  focus:outline-none h-[25px] text-base font-normal ${dark ? '' : 'border-mirage-black'}`}
+        className={`outline-none bg-transparent border-b border-solid  h-[25px] text-base font-normal ${dark ? '' : 'border-mirage-black'}`}
         type={type}
         name={name}
       />

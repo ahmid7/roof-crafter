@@ -81,7 +81,7 @@ function HeroSection() {
                   heading
                 </h5>
                 <p className="text-base leading-6 -tracking-[0.5%]">todo</p>
-              </div>
+              </div>♠
 
               <div className="between">
                 <div className="[&_span]:w-2 [&_span]:h-2 [&_span]:rounded-full [&_span]:bg-[#E0E0E0] flex gap-x-2">
