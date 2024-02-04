@@ -33,11 +33,11 @@ const Card = ({ title, paragraph, imageSrc }: CardProps) => (
   <div className="w-full h-[450px] xl:h-[625px] relative">
     <Image alt={`${title}-image`} src={imageSrc} fill quality={100} priority />
 
-    <div className="absolute bottom-0 left-0 w-full px-10">
-      <h4 className="max-w-[560px] font-medium text-white text-[40px] leading-[48px] capitalize -tracking-[1.5%]">
+    <div className="absolute bottom-5 left-0 w-full container-spacing space-y-3 xl:space-y-6">
+      <h4 className="max-w-[560px] header-style2 text-mirage-black capitalize ">
         {title}
       </h4>
-      <p className="max-w-[753px] font-normal text-white text-base leading-6">
+      <p className="max-w-[753px] font-normal text-mirage-black text-base leading-6">
         {paragraph}
       </p>
     </div>
@@ -46,7 +46,7 @@ const Card = ({ title, paragraph, imageSrc }: CardProps) => (
 
 function RecentProject() {
   return (
-    <section className="pb-10 xl:pb-12 px-8 xl:px-10">
+    <section className="pb-10 xl:pb-12 container-spacing">
       <div className="text-center">
         <h2 className="capitalize header-style2">
           recent roofing projects
@@ -56,7 +56,7 @@ function RecentProject() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-y-10 xl:gap-y-12 gap-x-8 xl:gap-x-10">
+      <div className="grid grid-cols-2 gap-y-8 lg:gap-y-10 xl:gap-y-12 gap-x-6 lg:gap-x-8 xl:gap-x-10">
         {services.map((service, index) => (
           <div key={ service.title + index } className ={`${ index == 0 ? 'col-span-2 border-2 border-solid border-green-900' : 'border-2 border-solid border-red-900' }`}>
             <Card
