@@ -26,12 +26,12 @@ function Footer() {
         </div>
 
         <div className="between-start">
-          <div className="flex items-start gap-x-[135px] xl:gap-x-[173px]">
+          <div className="flex items-start gap-x-[115px] xl:gap-x-[155px]">
             <div className="w-fit h-fit ">
               <Logo />
             </div>
 
-            <nav className="flex items-start gap-x-[95px] xl:gap-x-[120px] font-normal text-xl xl:text-2xl [&_>]:leading-[21.48px] [&_>]:-tracking-[-2.5%]">
+            <nav className="flex items-start gap-x-[85px] xl:gap-x-[110px] font-normal text-xl xl:text-2xl [&_>]:leading-[21.48px] [&_>]:-tracking-[-2.5%]">
               <ul className="flex flex-col gap-y-5 xl:gap-y-7">
                 <Link href="#">Our Works</Link>
                 <Link href="#">About Us</Link>
@@ -49,7 +49,7 @@ function Footer() {
             </nav>
           </div>
 
-          <div>
+          <div className="min-w-[350px] xl:min-w-[440px]">
             <ContactForm dark/>
           </div>
         </div>
@@ -77,9 +77,9 @@ const GetInTouch = () => {
     <div className="space-y-8 xl:space-y-10 px-8 xl:px-10 py-[60px]">
       <h1 className="font-medium  text-[115px] xl:text-[162px] leading-none -tracking-[2.5%] text-black">
         Get in touch <br />
-        <div className="start-center gap-x-8 xl:gap-x-10">
-          With us
-          <div className="w-[180px] h-[130px] xl:w-[237px] xl:h-[166px] relative">
+        <div className="start-center gap-x-8 xl:gap-x-9 text-nowrap">
+          <span>With us</span>
+          <div className="w-[180px] h-[130px] xl:w-[225px] xl:h-[166px] relative">
             <Image
               src="/assets/images/get-in-touch.png"
               alt="get-in-touch-image"
@@ -88,13 +88,13 @@ const GetInTouch = () => {
               quality={100}
               className="object-cover"
             />
-          </div>{" "}
-          Today
+          </div>{" "} 
+          <span>Today</span>
         </div>
       </h1>
 
       <div className="grid place-content-end">
-        <div className="py-4 border-b-2 border-black flex items-center justify-between min-w-[400px]">
+        <div className="py-4 border-b-2 border-black flex items-center justify-between min-w-[440px]">
           <input
             placeholder="Enter your email"
             type="email"

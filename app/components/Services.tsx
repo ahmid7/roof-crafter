@@ -54,6 +54,7 @@ function Services() {
                   fill
                   alt="roof-image"
                   src="/assets/images/roof.png"
+                  className="object-cover"
                   priority
                   quality={100}
                 />
