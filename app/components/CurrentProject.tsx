@@ -4,7 +4,7 @@ import Image from "next/image"
 
 function CurrentProject() {
   return (
-    <section className='pt-[50px] xl:pt-[60px] '>
+    <section className='pt-10 lg:pt-[50px] xl:pt-[60px] '>
       <div className="text-center">
         <h2 className="header-style2">
         What we have been up to
@@ -14,7 +14,7 @@ function CurrentProject() {
         </p>
       </div>
 
-      <div className='pt-[50px] xl:pt-20'>
+      <div className='pt-10 lg:pt-[50px] xl:pt-20'>
         <div className='between-start gap-x-16 xl:gap-x-20'>
           <div className='space-y-4 xl:space-y-6'>
             <h1 className='header-style2'>Project T</h1>
@@ -50,7 +50,7 @@ function CurrentProject() {
         </div>
       </div>
 
-      <div className='my-16 xl:my-20 relative w-full h-[550px] xl:h-[600px]'>
+      <div className='my-8 lg:my-16 xl:my-20 relative w-full h-[450px] lg:h-[550px] xl:h-[600px] '>
         <Image
           alt='project-image'
           className="object-cover"
@@ -61,7 +61,7 @@ function CurrentProject() {
         />
       </div>
 
-      <div className='px-6 between'>
+      <div className='px-4 lg:px-6 between'>
         <div className='[&_span]:w-2 [&_span]:h-2 [&_span]:rounded-full [&_span]:bg-[#E0E0E0] flex gap-x-2'>
           <span></span>
           <span></span>
@@ -75,7 +75,7 @@ function CurrentProject() {
           <span></span>
         </div>
 
-        <div className='gap-x-[15px] flex items-center'>
+        <div className='gap-x-3 lg:gap-x-[15px] flex items-center'>
           <ButtonLeft/>
 
           <ButtonRight />

@@ -33,7 +33,7 @@ const Card = ({ title, paragraph, imageSrc }: CardProps) => (
   <div className="w-full h-[450px] xl:h-[625px] relative">
     <Image alt={`${title}-image`} src={imageSrc} fill quality={100} priority />
 
-    <div className="absolute bottom-5 left-0 w-full container-spacing space-y-3 xl:space-y-6">
+    <div className="absolute bottom-5 left-0 w-full px-5 lg:px-8 xl:px-10 space-y-3 xl:space-y-6">
       <h4 className="max-w-[560px] header-style2 text-mirage-black capitalize ">
         {title}
       </h4>
