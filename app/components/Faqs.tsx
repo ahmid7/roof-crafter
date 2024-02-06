@@ -65,7 +65,7 @@ const Question = ({ image, question, answer }: QuestionProps) => {
       </div>
 
       <div className="space-y-2">
-        <h5 className="text-[#101828] paragraph-style2">
+        <h5 className="text-[#101828] paragraph-style3 ">
           {question}
         </h5>
         <p className="font-normal text-sm xl:text-base leading-5 xl:leading-6 -tracking-[0.5%] text-[#475467]">
@@ -78,8 +78,8 @@ const Question = ({ image, question, answer }: QuestionProps) => {
 
 function Faqs() {
   return (
-    <section className="px-8 xl:px-10">
-      <div className="max-w-[768px] space-y-4 xl:space-y-5">
+    <section className="container-spacing">
+      <div className="max-w-[768px] space-y-3 lg:space-y-4 xl:space-y-5">
         <h3 className="header-style2 -tracking-[1.5%] text-[#101828]">
           FAQs
         </h3>
@@ -90,7 +90,7 @@ function Faqs() {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-x-5 xl:gap-x-8 gap-y-12 xl:gap-y-16 pt-12 xl:pt-16">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-4 lg:gap-x-5 xl:gap-x-8 gap-y-8 lg:gap-y-12 xl:gap-y-16 pt-8 lg:pt-12 xl:pt-16">
         {FAQsData.map((data, index) => (
           <Question
             key={ data.question + index }

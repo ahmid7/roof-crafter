@@ -29,19 +29,23 @@
 }
 
 .header-style1 {
-  @apply text-4xl xl:text-[56px] text-black font-bold -tracking-[1.5%] leading-[120%]
+  @apply text-3xl lg:text-4xl xl:text-[56px] text-black font-bold -tracking-[1.5%] leading-[120%]
 }
 
 .header-style2 {
-  @apply font-medium text-4xl xl:text-[40px] -tracking-[1.5%] leading-10 xl:leading-[48px]
+  @apply font-medium text-3xl lg:text-4xl xl:text-[40px] -tracking-[1.5%] leading-8 lg:leading-10 xl:leading-[48px]
 }
 
 .paragraph-style1 {
-  @apply text-lg xl:text-xl leading-[26px] xl:leading-[30px] -tracking-[0.5%] font-normal
+  @apply text-base lg:text-lg xl:text-xl leading-5 lg:leading-[26px] xl:leading-[30px] -tracking-[0.5%] font-normal
 }
 
 .paragraph-style2 {
-  @apply text-base xl:text-lg font-normal leading-6 xl:leading-[27px]
+  @apply text-sm lg:text-base xl:text-lg font-normal leading-5 lg:leading-6 xl:leading-[27px]
+}
+
+.paragraph-style3 {
+  @apply text-sm lg:text-base xl:text-lg font-medium leading-6 xl:leading-[27px]
 }
 
 .container-spacing {

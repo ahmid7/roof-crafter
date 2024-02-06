@@ -9,8 +9,8 @@ function HeroSection() {
   return (
     <section className="flex">
       <Header />
-      <div className="space-y-11 xl:space-y-[60px] pt-24 xl:pt-[114px] basis-1/2 pl-8 xl:pl-10">
-        <div className="space-y-5 xl:space-y-6 pr-16 xl:pr-[87px]">
+      <div className="space-y-11 xl:space-y-[60px] pt-24 xl:pt-[114px] basis-1/2 container-spacing">
+        <div className="space-y-5 xl:space-y-6 pr-0 lg:pr-16 xl:pr-[87px]">
           <h2 className="header-style1">
             Trusted Roofing Services for Your Home
           </h2>
@@ -24,13 +24,13 @@ function HeroSection() {
           <ContactForm extraInfo  dark={ false }/>
         </div>
 
-        <div className="pr-8">
+        <div className="lg:pr-8">
           <div className="between">
-            <p className="text-base xl:text-xl leading-7 xl:leading-8 -tracking-[1.5%]">
+            <p className="text-sm lg:text-base xl:text-xl leading-7 xl:leading-8 -tracking-[1.5%]">
               These brands trust us
             </p>
 
-            <div className="start-center [&_div]:relative [&_div]:w-[110px] [&_div]:h-[42px] [&_div]:xl:w-[140px] [&_div]:xl:h-[56px]">
+            <div className="start-center [&_div]:relative [&_div]:w-[90px] [&_div]:h-[32px] [&_div]:lg:w-[110px] [&_div]:lg:h-[42px] [&_div]:xl:w-[140px] [&_div]:xl:h-[56px]">
               <div className="relative">
                 <Image
                   className="object-cover"
@@ -55,8 +55,8 @@ function HeroSection() {
             </div>
           </div>
 
-          <div className="mt-7 pb-4 xl:mt-[39px]">
-            <span className="text-base xl:text-lg font-medium">
+          <div className="mt-5 lg:mt-7 pb-4 xl:mt-[39px]">
+            <span className="text-sm lg:text-base xl:text-lg font-medium">
               Scroll Down{" "}
             </span>
           </div>

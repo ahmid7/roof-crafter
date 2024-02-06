@@ -1,6 +1,6 @@
 export const ArrowRight = () => (
   <svg
-    className="w-7 h-5 stroke-inherit"
+    className="w-6 h-4 lg:w-7 lg:h-5 stroke-inherit"
     viewBox="0 0 28 20"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +177,7 @@ export const Logo = () => (
   <svg
     // width="198"
     // height="37"
-    className="w-[150px] h-[32px] xl:w-[198px] xl:h-[37px]"
+    className="w-[120px] h-[27px] lg:w-[150px] lg:h-[32px] xl:w-[198px] xl:h-[37px]"
     viewBox="0 0 198 37"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

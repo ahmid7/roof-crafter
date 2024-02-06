@@ -34,10 +34,10 @@ const Card = ({ title, paragraph, imageSrc }: CardProps) => (
     <Image alt={`${title}-image`} src={imageSrc} fill quality={100} priority />
 
     <div className="absolute bottom-5 left-0 w-full px-5 lg:px-8 xl:px-10 space-y-3 xl:space-y-6">
-      <h4 className="max-w-[560px] header-style2 text-mirage-black capitalize ">
+      <h4 className="max-w-[300px] lg:max-w-[560px] header-style2 text-mirage-black capitalize ">
         {title}
       </h4>
-      <p className="max-w-[753px] font-normal text-mirage-black text-base leading-6">
+      <p className=" lg:max-w-[753px] font-normal text-mirage-black text-sm lg:text-base leading-5 lg:leading-6">
         {paragraph}
       </p>
     </div>
@@ -46,7 +46,7 @@ const Card = ({ title, paragraph, imageSrc }: CardProps) => (
 
 function RecentProject() {
   return (
-    <section className="pb-10 xl:pb-12 container-spacing">
+    <section className="pb-8 lg:pb-10 xl:pb-12 container-spacing">
       <div className="text-center">
         <h2 className="capitalize header-style2">
           recent roofing projects

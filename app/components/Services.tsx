@@ -4,10 +4,10 @@ import { LineDownward, LineTop } from "./svgs";
 
 function Services() {
   return (
-    <section className="pt-10 lg:pt-[60px]">
+    <section className=" pt-8 lg:pt-[60px]">
       <div className="">
-        <div className="container-spacing  flex flex-col lg:flex-row gap-y-2 lg:gap-x-8 xl:gap-x-10 items-start">
-          <h2 className=" font-medium text-4xl xl:text-[50px] leading-[50px] xl:leading-[67.2px] -tracking-[1.5%] xl:basis-[45%]">
+        <div className="container-spacing  flex flex-col lg:flex-row gap-y-2  lg:gap-x-8 xl:gap-x-10 items-start">
+          <h2 className=" font-medium text-3xl lg:text-4xl xl:text-[50px] leading-[50px] xl:leading-[67.2px] -tracking-[1.5%] xl:basis-[45%]">
             Building Trust Through Quality Roofing Services
           </h2>
 
@@ -26,7 +26,7 @@ function Services() {
           </div>
 
           <div className="relative h-[650px] lg:h-[850px] xl:h-[1246px] gap-x-[50px] xl:gap-x-[80px] flex">
-            <div className="basis-[65%] xl:basis-[36%] px-8 xl:px-10" />
+            <div className="basis-[65%] xl:basis-[36%] container-spacing" />
 
             <div className=" flex gap-x-16 xl:gap-x-[111px] container-spacing">
               <div className="hidden lg:block">

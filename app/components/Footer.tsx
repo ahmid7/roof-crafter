@@ -9,8 +9,8 @@ function Footer() {
     <section className="overflow-hidden">
       <GetInTouch />
 
-      <div className="bg-[#070A0E] pt-[50px] xl:pt-[60px] px-8 xl:px-10 text-white">
-        <div className="space-y-5 font-medium">
+      <div className="bg-[#070A0E] pt-11 lg:pt-[50px] xl:pt-[60px] container-spacing text-white">
+        <div className="space-y-4 lg:space-y-4 xl:space-y-5 font-medium">
           <p className="text-7xl xl:text-8xl leading-[70px] xl:leading-[85.92px] -tracking-[2.5%]">
             Let's create <br /> magic together{" "}
           </p>
@@ -21,7 +21,7 @@ function Footer() {
           </button>
         </div>
 
-        <div className="py-12 xl:py-[75px] ">
+        <div className="py-8 lg:py-12 xl:py-[75px] ">
           <LineWithStar />
         </div>
 
@@ -31,8 +31,8 @@ function Footer() {
               <Logo />
             </div>
 
-            <nav className="flex items-start gap-x-[85px] xl:gap-x-[110px] font-normal text-xl xl:text-2xl [&_>]:leading-[21.48px] [&_>]:-tracking-[-2.5%]">
-              <ul className="flex flex-col gap-y-5 xl:gap-y-7">
+            <nav className="flex items-start gap-x-[85px] xl:gap-x-[110px] font-normal text-base lg:text-xl xl:text-2xl [&_>]:leading-[21.48px] [&_>]:-tracking-[-2.5%]">
+              <ul className="flex flex-col gap-y-4 lg:gap-y-5 xl:gap-y-6">
                 <Link href="#">Our Works</Link>
                 <Link href="#">About Us</Link>
                 <Link href="#">Service</Link>
@@ -40,7 +40,7 @@ function Footer() {
                 <Link href="#">Our Team</Link>
               </ul>
 
-              <ul className="flex flex-col gap-y-5 xl:gap-y-7">
+              <ul className="flex flex-col gap-y-4 lg:gap-y-5 xl:gap-y-6">
                 <Link href="#">Linkedin</Link>
                 <Link href="#">Instagram</Link>
                 <Link href="#">Twitter</Link>
@@ -74,12 +74,12 @@ export default Footer;
 
 const GetInTouch = () => {
   return (
-    <div className="space-y-8 xl:space-y-10 px-8 xl:px-10 py-[60px]">
-      <h1 className="font-medium  text-[115px] xl:text-[162px] leading-none -tracking-[2.5%] text-black">
+    <div className="space-y-7 lg:space-y-8 xl:space-y-10 px-8 xl:px-10 py-10 lg:py-[60px]">
+      <h1 className="font-medium  text-[92px] lg:text-[115px] xl:text-[162px] leading-none -tracking-[2.5%] text-black">
         Get in touch <br />
-        <div className="start-center gap-x-8 xl:gap-x-9 text-nowrap">
+        <div className="start-center gap-x-3 lg:gap-x-5 xl:gap-x-9 text-nowrap">
           <span>With us</span>
-          <div className="w-[180px] h-[130px] xl:w-[225px] xl:h-[166px] relative">
+          <div className="w-[155px] h-[100px] lg:w-[180px] lg:h-[130px] xl:w-[225px] xl:h-[166px] relative">
             <Image
               src="/assets/images/get-in-touch.png"
               alt="get-in-touch-image"
@@ -94,11 +94,11 @@ const GetInTouch = () => {
       </h1>
 
       <div className="grid place-content-end">
-        <div className="py-4 border-b-2 border-black flex items-center justify-between min-w-[440px]">
+        <div className="py-2 lg:py-3 xl:py-4 border-b-2 border-black between gap-x-2 xl:gap-x-3 min-w-[270px] lg:min-w-[360px] xl:min-w-[440px]">
           <input
             placeholder="Enter your email"
             type="email"
-            className="border-none outline-none basis-3/4 text-lg font-normal leading-[30px] -tracking-[0.5%] text-[#505050]"
+            className="border-none flex-1 outline-none basis-3/4 text-base lg:text-lg font-normal leading-[30px] -tracking-[0.5%] text-[#505050]"
           />
 
           <span className="w-fit stroke-black">

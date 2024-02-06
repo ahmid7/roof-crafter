@@ -71,7 +71,7 @@ const Review = ({ paragraph, name, titleHeld, imageSrc }: ReviewProps) => {
 
 function CustomerReview() {
   return (
-    <section className="px-8 xl:px-10 pb-[60px]">
+    <section className="container-spacing pb-8 lg:pb-[60px]">
       <div className="text-center">
         <h2 className="header-style2">
           Hey, don’t just take our word for it
@@ -99,7 +99,7 @@ function CustomerReview() {
         </div>
       </div>
 
-      <div className="mt-9 xl:mt-12 flex justify-between items-center">
+      <div className="mt-7 lg:mt-9 xl:mt-12 flex justify-between items-center">
         <div className="[&_span]:w-2 [&_span]:h-2 [&_span]:rounded-full [&_span]:bg-[#E0E0E0] flex gap-x-2">
           <span></span>
           <span></span>
