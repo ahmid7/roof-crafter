@@ -20,14 +20,14 @@ const Input: React.FC<Input> = ({
   dark
 }) => {
   return (
-    <div className={`flex flex-col ${ dark ? 'text-white' : 'text-mirage-black'}`}>
+    <div className={`flex flex-col gap-y-1 ${ dark ? 'text-white' : 'text-mirage-black'}`}>
       <label
-        className={`-tracking-[2.5%] leading-[14.32px] text-sm lg:text-base font-normal ${dark ? "" : "text-gray-1"}`}
+        className={`-tracking-[2.5%] leading-[14.32px] text-base md:text-sm lg:text-base font-normal ${dark ? "" : "text-gray-1"}`}
       >
         {label}
       </label>
       <input
-        className={`outline-none bg-transparent border-b border-solid  h-[25px] text-base font-normal ${dark ? '' : 'border-mirage-black'}`}
+        className={`outline-none bg-transparent border-b border-solid  h-[25px] text-base md:text-sm lg:text-base font-normal ${dark ? '' : 'border-mirage-black'}`}
         type={type}
         name={name}
       />
@@ -37,7 +37,7 @@ const Input: React.FC<Input> = ({
 
 function ContactForm({ extraInfo, dark }: ContactForm) {
   return (
-    <section className="space-y-6 lg:space-y-8 xl:space-y-10">
+    <section className="space-y-9 md:space-y-6 lg:space-y-8 xl:space-y-10">
       <Input
         type="text"
         name="FullName"
@@ -68,7 +68,7 @@ function ContactForm({ extraInfo, dark }: ContactForm) {
       </div>
 
       <button className={`between gap-x-4 xl:gap-x-6 py-4 px-6 xl:py-5 xl:px-8 outline outline-1 rounded-[32px] ${dark ? 'outline-white' : 'outline-mirage-black'}`}>
-        <span className="font-medium text-sm lg:text-base xl:text-xl leading-[17.9px] ">
+        <span className="font-medium text-xl md:text-sm lg:text-base xl:text-xl leading-[17.9px] ">
           Get a free inspection
         </span>
 

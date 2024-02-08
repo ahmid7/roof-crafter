@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 export default function Home() {
 
   return (
-    <main className="font-bold text-3xl space-y-10 lg:space-y-[60px]">
+    <main className="font-bold text-3xl space-y-10 md:space-y-10 lg:space-y-[60px]">
       <HeroSection />
       <Services />
       <RecentProject />

@@ -42,7 +42,7 @@ const ReviewsData = [
 
 const Review = ({ paragraph, name, titleHeld, imageSrc }: ReviewProps) => {
   return (
-    <div className="py-5 xl:py-8 space-y-4 xl:space-y-6 text-mirage-black">
+    <div className="py-3 md:py-5 xl:py-8 space-y-4 xl:space-y-6 text-mirage-black">
       <Stars />
 
       <p className="paragraph-style2 -tracking-[0.5%]">
@@ -50,7 +50,7 @@ const Review = ({ paragraph, name, titleHeld, imageSrc }: ReviewProps) => {
       </p>
 
       <div className="flex items-center gap-x-3 xl:gap-x-5">
-        <div className="relative w-10 h-10 xl:w-14 xl:h-14 rounded-full">
+        <div className="relative w-12 h-12 md:w-10 md:h-10 xl:w-14 xl:h-14 rounded-full">
           <Image
             src={imageSrc}
             alt="customer-image"
@@ -60,7 +60,7 @@ const Review = ({ paragraph, name, titleHeld, imageSrc }: ReviewProps) => {
           />
         </div>
 
-        <div className="text-sm xl:text-base [&_>]:leading-6 [&_>]:-tracking-[0.05%]">
+        <div className="text-base md:text-sm xl:text-base [&_>]:leading-6 [&_>]:-tracking-[0.05%]">
           <p className="font-medium">{name}</p>
           <span className="font-normal">{titleHeld}</span>
         </div>
@@ -71,7 +71,7 @@ const Review = ({ paragraph, name, titleHeld, imageSrc }: ReviewProps) => {
 
 function CustomerReview() {
   return (
-    <section className="container-spacing pb-8 lg:pb-[60px]">
+    <section className="container-spacing pt-4 md:pt-0 pb-10 md:pb-8 lg:pb-[60px]">
       <div className="text-center">
         <h2 className="header-style2">
           Hey, don’t just take our word for it
@@ -83,7 +83,7 @@ function CustomerReview() {
       </div>
 
       <div className="w-full overflow-x-hidden">
-        <div className="flex items-start flex-nowrap gap-x-8">
+        <div className="flex items-start flex-nowrap gap-x-6 md:gap-x-8">
           {ReviewsData.map((review, index) => {
             return (
               <div className="min-w-[500px] xl:min-w-[600px]" key={index + 10}>

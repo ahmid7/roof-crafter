@@ -29,25 +29,33 @@
 }
 
 .header-style1 {
-  @apply text-3xl lg:text-4xl xl:text-[56px] text-black font-bold -tracking-[1.5%] leading-[120%]
+  @apply text-[32px] md:text-3xl lg:text-4xl xl:text-[56px] text-black font-bold -tracking-[1.5%] leading-[38.4px] md:leading-[120%]
 }
 
 .header-style2 {
-  @apply font-medium text-3xl lg:text-4xl xl:text-[40px] -tracking-[1.5%] leading-8 lg:leading-10 xl:leading-[48px]
+  @apply font-medium text-[28px] md:text-3xl lg:text-4xl xl:text-[40px] -tracking-[1.5%] leading-8 lg:leading-10 xl:leading-[48px]
 }
 
 .paragraph-style1 {
-  @apply text-base lg:text-lg xl:text-xl leading-5 lg:leading-[26px] xl:leading-[30px] -tracking-[0.5%] font-normal
+  @apply text-base lg:text-lg xl:text-xl leading-6 lg:leading-[26px] xl:leading-[30px] -tracking-[0.5%] font-normal
 }
 
 .paragraph-style2 {
-  @apply text-sm lg:text-base xl:text-lg font-normal leading-5 lg:leading-6 xl:leading-[27px]
+  @apply text-base md:text-sm lg:text-base xl:text-lg font-normal leading-6 md:leading-5 lg:leading-6 xl:leading-[27px]
 }
 
 .paragraph-style3 {
-  @apply text-sm lg:text-base xl:text-lg font-medium leading-6 xl:leading-[27px]
+  @apply  text-base md:text-sm lg:text-base xl:text-lg font-medium leading-6 md:leading-5 lg:leading-6 xl:leading-[27px]
 }
 
 .container-spacing {
-  @apply px-6 lg:px-8 xl:px-10
+  @apply px-5 md:px-6 lg:px-8 xl:px-10
+}
+
+.number-style {
+  @apply text-6xl md:text-[82px] lg:text-8xl xl:text-[112px] leading-none md:leading-[92px] lg:leading-[100px]  xl:leading-[134.4px]
+}
+
+.overlay-gradient {
+  background: linear-gradient(white, black);
 }

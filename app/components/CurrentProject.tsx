@@ -4,7 +4,7 @@ import Image from "next/image"
 
 function CurrentProject() {
   return (
-    <section className='pt-10 lg:pt-[50px] xl:pt-[60px] '>
+    <section className='pt-12 md:pt-10 lg:pt-[50px] xl:pt-[60px] '>
       <div className="text-center">
         <h2 className="header-style2">
         What we have been up to
@@ -14,8 +14,8 @@ function CurrentProject() {
         </p>
       </div>
 
-      <div className='pt-10 lg:pt-[50px] xl:pt-20'>
-        <div className='between-start gap-x-16 xl:gap-x-20'>
+      <div className=' md:pt-10 lg:pt-[50px] xl:pt-20'>
+        <div className=' md:between-start space-y-8 gap-x-16 xl:gap-x-20'>
           <div className='space-y-4 xl:space-y-6'>
             <h1 className='header-style2'>Project T</h1>
             <p className='paragraph-style2 -tracking-[0.5%]'>Project T involved the meticulous installation of a cutting-edge cool roof system, enhancing energy efficiency and reducing cooling costs.</p>
@@ -26,7 +26,7 @@ function CurrentProject() {
             </div>
           </div>
 
-          <div className='basis-[464px] grid grid-cols-2 gap-y-6 xl:gap-y-8 text-sm xl:text-base [&_p]:font-bold [&_p]:leading-5 [&_p]:xl:leading-6 [&_p]:-tracking-[0.05%] [&_small]:font-normal [&_small]:leading-5 [&_small]:xl:leading-6 [&_small]:-tracking-[0.5%] [&_p]:pb-1 [&_p]:xl:pb-2'>
+          <div className='basis-[464px] grid grid-cols-2 gap-y-6 xl:gap-y-8 text-base md:text-sm xl:text-base [&_p]:font-bold [&_p]:leading-5 [&_p]:xl:leading-6 [&_p]:-tracking-[0.05%] [&_small]:font-normal [&_small]:leading-5 [&_small]:xl:leading-6 [&_small]:-tracking-[0.5%] [&_p]:pb-1 [&_p]:xl:pb-2'>
             <div>
               <p>Client</p>
               <small className=''>John Smith</small>
@@ -61,7 +61,7 @@ function CurrentProject() {
         />
       </div>
 
-      <div className='px-4 lg:px-6 between'>
+      <div className='md:px-4 lg:px-6 between'>
         <div className='[&_span]:w-2 [&_span]:h-2 [&_span]:rounded-full [&_span]:bg-[#E0E0E0] flex gap-x-2'>
           <span></span>
           <span></span>

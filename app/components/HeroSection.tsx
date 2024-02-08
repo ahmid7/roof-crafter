@@ -7,7 +7,7 @@ import { ButtonLeft, ButtonRight } from "./svgs";
 
 function HeroSection() {
   return (
-    <section className="flex">
+    <section className="flex flex-col md:flex-row">
       <Header />
       <div className="space-y-11 xl:space-y-[60px] pt-24 xl:pt-[114px] basis-1/2 container-spacing">
         <div className="space-y-5 xl:space-y-6 pr-0 lg:pr-16 xl:pr-[87px]">
@@ -21,10 +21,12 @@ function HeroSection() {
             roofing, and more.
           </p>
 
-          <ContactForm extraInfo  dark={ false }/>
+          <div className="hidden md:inline-block">
+            <ContactForm extraInfo dark={false} />
+          </div>
         </div>
 
-        <div className="lg:pr-8">
+        <div className="lg:pr-8 hidden md:inline-block">
           <div className="between">
             <p className="text-sm lg:text-base xl:text-xl leading-7 xl:leading-8 -tracking-[1.5%]">
               These brands trust us
@@ -55,7 +57,7 @@ function HeroSection() {
             </div>
           </div>
 
-          <div className="mt-5 lg:mt-7 pb-4 xl:mt-[39px]">
+          <div className=" mt-5 lg:mt-7 pb-4 xl:mt-[39px]">
             <span className="text-sm lg:text-base xl:text-lg font-medium">
               Scroll Down{" "}
             </span>
@@ -63,7 +65,7 @@ function HeroSection() {
         </div>
       </div>
 
-      <div className="basis-1/2 h-inherit">
+      <div className="pt-6 px-5 md:px-0 md:basis-1/2 h-[469.88px] md:h-inherit">
         <div className="relative w-full h-full">
           <Image
             priority
@@ -74,7 +76,7 @@ function HeroSection() {
             alt="roofing-image"
           />
 
-          <div className="absolute bottom-0 left-0 py-8 px-10 bg-[#1017204D]  w-full blur-[30%]">
+          <div className="absolute bottom-0 left-0 py-8 md:py-8 px-4 md:px-10 bg-[#1017204D]  w-full blur-[30%]">
             <div className="space-y-9 xl:space-y-12 text-white ">
               <div>
                 <h5 className="text-2xl font-bold leading-[33.6px] -tracking-[1.5%]">
@@ -83,7 +85,7 @@ function HeroSection() {
                 <p className="text-base leading-6 -tracking-[0.5%]">todo</p>
               </div>
 
-              <div className="between">
+              <div className="hidden md:between">
                 <div className="[&_span]:w-2 [&_span]:h-2 [&_span]:rounded-full [&_span]:bg-[#E0E0E0] flex gap-x-2">
                   <span></span>
                   <span></span>
@@ -100,6 +102,19 @@ function HeroSection() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="px-5 md:hidden">
+        <div className=" py-10 grid place-content-center">
+          <div className="[&_span]:w-3 [&_span]:h-3 [&_span]:rounded-full [&_span]:bg-[#E0E0E0] flex gap-x-2">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <ContactForm dark={ false } extraInfo />
       </div>
     </section>
   );

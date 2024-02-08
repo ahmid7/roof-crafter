@@ -74,19 +74,19 @@ export default Footer;
 
 const GetInTouch = () => {
   return (
-    <div className="space-y-7 lg:space-y-8 xl:space-y-10 px-8 xl:px-10 py-10 lg:py-[60px]">
-      <h1 className="font-medium  text-[92px] lg:text-[115px] xl:text-[162px] leading-none -tracking-[2.5%] text-black">
+    <div className="space-y-5 md:space-y-7 lg:space-y-8 xl:space-y-10 container-spacing py-10 lg:py-[60px]">
+      <h1 className="font-medium text-[44px] md:text-[92px] lg:text-[115px] xl:text-[162px] leading-none -tracking-[2.5%] text-black">
         Get in touch <br />
-        <div className="start-center gap-x-3 lg:gap-x-5 xl:gap-x-9 text-nowrap">
+        <div className="start-center gap-x-1 md:gap-x-3 lg:gap-x-5 xl:gap-x-9 text-nowrap">
           <span>With us</span>
-          <div className="w-[155px] h-[100px] lg:w-[180px] lg:h-[130px] xl:w-[225px] xl:h-[166px] relative">
+          <div className="w-[70px] h-[55px] md:w-[155px] md:h-[100px] lg:w-[180px] lg:h-[130px] xl:w-[225px] xl:h-[166px] relative">
             <Image
               src="/assets/images/get-in-touch.png"
               alt="get-in-touch-image"
               fill
               priority
               quality={100}
-              className="object-cover"
+              className="object-cover object-center"
             />
           </div>{" "} 
           <span>Today</span>
@@ -94,7 +94,7 @@ const GetInTouch = () => {
       </h1>
 
       <div className="grid place-content-end">
-        <div className="py-2 lg:py-3 xl:py-4 border-b-2 border-black between gap-x-2 xl:gap-x-3 min-w-[270px] lg:min-w-[360px] xl:min-w-[440px]">
+        <div className="py-2 lg:py-3 xl:py-4 border-b-2 border-black between gap-x-2 xl:gap-x-3 min-w-[170px] md:min-w-[270px] lg:min-w-[360px] xl:min-w-[440px]">
           <input
             placeholder="Enter your email"
             type="email"

@@ -204,3 +204,16 @@ export const Logo = () => (
     </defs>
   </svg>
 );
+
+export const Hamburger = () => (
+  <svg
+    width="25"
+    height="9"
+    viewBox="0 0 25 9"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <line x1="0.839478" y1="0.5" x2="24.8395" y2="0.5" stroke="#121212" />
+    <line x1="0.839478" y1="8.5" x2="24.8395" y2="8.5" stroke="#121212" />
+  </svg>
+);

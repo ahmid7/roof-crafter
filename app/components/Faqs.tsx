@@ -48,8 +48,8 @@ type QuestionProps = {
 
 const Question = ({ image, question, answer }: QuestionProps) => {
   return (
-    <div>
-      <div className="bg-[#F4F6FD] h-10 w-10 xl:h-12 xl:w-12 rounded-full p-7 xl:p-8 grid place-content-center">
+    <div >
+      <div className="bg-[#F4F6FD] h-10 w-10 xl:h-12 xl:w-12 rounded-full p-7 xl:p-8 grid place-content-center ">
         <div className="w-fit h-fit p-2 rounded-full bg-[#E2EAFE]">
           <div className="w-5 h-5 xl:w-6 xl:h-6  relative grid place-content-center">
             <Image
@@ -64,11 +64,11 @@ const Question = ({ image, question, answer }: QuestionProps) => {
         </div>
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-2 pt-2 md:pt-0">
         <h5 className="text-[#101828] paragraph-style3 ">
           {question}
         </h5>
-        <p className="font-normal text-sm xl:text-base leading-5 xl:leading-6 -tracking-[0.5%] text-[#475467]">
+        <p className="font-normal text-base md:text-sm xl:text-base leading-6 md:leading-5 xl:leading-6 -tracking-[0.5%] text-[#475467]">
           {answer}
         </p>
       </div>
@@ -90,7 +90,7 @@ function Faqs() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-4 lg:gap-x-5 xl:gap-x-8 gap-y-8 lg:gap-y-12 xl:gap-y-16 pt-8 lg:pt-12 xl:pt-16">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 lg:gap-x-5 xl:gap-x-8 gap-y-8 lg:gap-y-12 xl:gap-y-16 pt-8 lg:pt-12 xl:pt-16">
         {FAQsData.map((data, index) => (
           <Question
             key={ data.question + index }
