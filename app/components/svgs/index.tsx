@@ -134,8 +134,7 @@ export const ButtonRight = () => (
 
 export const LineWithStar = () => (
   <svg
-    width="1360"
-    height="46"
+    className="w-inherit h-inherit md:w-[1360px] md:h-[46px]"
     viewBox="0 0 1360 46"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

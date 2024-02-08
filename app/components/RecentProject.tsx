@@ -30,13 +30,13 @@ const services = [
 ];
 
 const Card = ({ title, paragraph, imageSrc }: CardProps) => (
-  <div className="w-full h-[470px] md:h-[450px] xl:h-[625px] relative border-2 border-solid border-red-900">
+  <div className="w-full h-[470px] md:h-[450px] xl:h-[625px] relative ">
     
-    <div className="absolute top-0 left-0 w-full h-full overlay-gradient bg-transparent"/>
+    <div className="absolute top-0 left-0 w-full h-full z-10 "/>
 
     <Image 
       alt={`${title}-image`} 
-      className="object-center overlay-gradient"
+      className="object-center overlay-gradient z-0 bg-[linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%), lightgray 50%]"
       src={imageSrc} 
       fill 
       quality={100} 

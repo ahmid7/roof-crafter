@@ -9,29 +9,31 @@ function Footer() {
     <section className="overflow-hidden">
       <GetInTouch />
 
-      <div className="bg-[#070A0E] pt-11 lg:pt-[50px] xl:pt-[60px] container-spacing text-white">
-        <div className="space-y-4 lg:space-y-4 xl:space-y-5 font-medium">
-          <p className="text-7xl xl:text-8xl leading-[70px] xl:leading-[85.92px] -tracking-[2.5%]">
+      <div className="bg-[#070A0E] pt-7 md:pt-11 lg:pt-[50px] xl:pt-[60px] container-spacing text-white">
+        <div className="space-y-5 md:space-y-4 xl:space-y-5 font-medium">
+          <p className="text-5xl md:text-7xl xl:text-8xl leading-[45px] md:leading-[70px] xl:leading-[85.92px] -tracking-[2.5%]">
             Let's create <br /> magic together{" "}
           </p>
 
-          <button className="gap-x-5 xl:gap-x-6 border border-solid border-white flex items-center  rounded-[32px] px-8 py-5 stroke-[#ffff]">
-            <span className="text-lg xl:text-xl leading-[14px] xl:leading-[17.9px]">Send us a message</span>
+          <button className="gap-x-5 xl:gap-x-6 border border-solid border-white flex items-center  rounded-[32px] px-5 py-4 md:px-8 md:py-5 stroke-[#ffff]">
+            <span className="text-base lg:text-lg xl:text-xl leading-[14px] xl:leading-[17.9px]">
+              Send us a message
+            </span>
             <ArrowRight />
           </button>
         </div>
 
-        <div className="py-8 lg:py-12 xl:py-[75px] ">
+        <div className="py-7 md:py-8 lg:py-12 xl:py-[75px] ">
           <LineWithStar />
         </div>
 
-        <div className="between-start">
-          <div className="flex items-start gap-x-[115px] xl:gap-x-[155px]">
-            <div className="w-fit h-fit ">
+        <div className="space-y-[52px] md:between-start">
+          <div className="flex flex-row items-start md:gap-x-[115px] xl:gap-x-[155px]">
+            <div className="w-full h-fit  md:w-fit md:h-fit grid place-content-center md:inline-flex">
               <Logo />
             </div>
 
-            <nav className="flex items-start gap-x-[85px] xl:gap-x-[110px] font-normal text-base lg:text-xl xl:text-2xl [&_>]:leading-[21.48px] [&_>]:-tracking-[-2.5%]">
+            <nav className="hidden md:flex items-start gap-x-[85px] xl:gap-x-[110px] font-normal text-base lg:text-xl xl:text-2xl [&_>]:leading-[21.48px] [&_>]:-tracking-[-2.5%]">
               <ul className="flex flex-col gap-y-4 lg:gap-y-5 xl:gap-y-6">
                 <Link href="#">Our Works</Link>
                 <Link href="#">About Us</Link>
@@ -49,12 +51,29 @@ function Footer() {
             </nav>
           </div>
 
-          <div className="min-w-[350px] xl:min-w-[440px]">
-            <ContactForm dark/>
+          <div className="min-w-full md:min-w-[350px] xl:min-w-[440px]">
+            <ContactForm dark />
           </div>
+
+          <nav className="flex items-start gap-x-24 md:gap-x-[85px] xl:gap-x-[110px] font-normal text-base lg:text-xl xl:text-2xl [&_>]:leading-[21.48px] [&_>]:-tracking-[-2.5%]">
+            <ul className="flex flex-col gap-y-4 lg:gap-y-5 xl:gap-y-6">
+              <Link href="#">Our Works</Link>
+              <Link href="#">About Us</Link>
+              <Link href="#">Service</Link>
+              <Link href="#">Resources</Link>
+              <Link href="#">Our Team</Link>
+            </ul>
+
+            <ul className="flex flex-col gap-y-4 lg:gap-y-5 xl:gap-y-6">
+              <Link href="#">Linkedin</Link>
+              <Link href="#">Instagram</Link>
+              <Link href="#">Twitter</Link>
+              <Link href="#">YouTube</Link>
+            </ul>
+          </nav>
         </div>
 
-        <div className="between-start pb-5 pt-20 xl:pt-[90px] text-base xl:text-lg">
+        <div className="between-start pb-5 pt-20 xl:pt-[90px] text-sm md:text-base xl:text-lg">
           <p className="flex space-x-3 items-center">
             <span className=" leading-[21.48px] -tracking-[2.5%] font-normal">
               All right reserved 2023
@@ -88,7 +107,7 @@ const GetInTouch = () => {
               quality={100}
               className="object-cover object-center"
             />
-          </div>{" "} 
+          </div>{" "}
           <span>Today</span>
         </div>
       </h1>

@@ -53,12 +53,13 @@ function CurrentProject() {
       <div className='my-8 lg:my-16 xl:my-20 relative w-full h-[450px] lg:h-[550px] xl:h-[600px] '>
         <Image
           alt='project-image'
-          className="object-cover"
+          className="object-cover z-0"
           src="/assets/images/projectImage.png"
           fill
           priority
           quality={100}
         />
+
       </div>
 
       <div className='md:px-4 lg:px-6 between'>

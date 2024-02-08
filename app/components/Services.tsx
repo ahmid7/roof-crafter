@@ -33,7 +33,7 @@ function Services() {
                 <LineDownward />
               </div>
 
-              <div className=" md:start font-normal space-y-8 md:gap-x-12 xl:gap-x-[62px] pt-10 md:pt-6 xl:pt-[30px]">
+              <div className=" md:start font-normal space-y-8 md:space-y-0 md:gap-x-12 xl:gap-x-[62px] pt-10 md:pt-6 xl:pt-[30px]">
                 <div>
                   <h5 className="number-style">200+</h5>
                   <p className="paragraph-style2 -tracking-[0.5%] pt-2 xl:pt-[21px]">
@@ -60,7 +60,7 @@ function Services() {
             </div>
           </div>
 
-          <div className="relative w-full h-[300px]">
+          <div className="relative w-full h-[300px] block md:hidden">
             <Image
               fill
               alt="roof-image"
