@@ -7,7 +7,7 @@ import { ButtonLeft, ButtonRight } from "./svgs";
 
 function HeroSection() {
   return (
-    <section className="flex flex-col md:flex-row">
+    <section className="flex flex-col md:flex-row border-2 border-solid border-red-900 h-full">
       <Header />
       <div className="space-y-11 xl:space-y-[60px] pt-24 xl:pt-[114px] basis-1/2 container-spacing">
         <div className="space-y-5 xl:space-y-6 pr-0 lg:pr-16 xl:pr-[87px]">
@@ -21,7 +21,7 @@ function HeroSection() {
             roofing, and more.
           </p>
 
-          <div className="hidden md:inline-block">
+          <div className="hidden md:block">
             <ContactForm extraInfo dark={false} />
           </div>
         </div>
@@ -65,14 +65,14 @@ function HeroSection() {
         </div>
       </div>
 
-      <div className="pt-6 px-5 md:px-0 md:basis-1/2 h-[469.88px] md:h-inherit">
-        <div className="relative w-full h-full">
+      <div className="pt-6 px-5 md:pt-0 md:px-0 md:basis-1/2  border-2 border-solid border-green-900 md:h-inherit">
+        <div className="relative w-full h-[469.88px] md:h-full">
           <Image
             priority
             src="/assets/images/roofing.webp"
             layout="fill"
             quality={100}
-            className="w-full h-full object-cover"
+            className="w-full h-full"
             alt="roofing-image"
           />
 
@@ -104,7 +104,7 @@ function HeroSection() {
         </div>
       </div>
 
-      <div className="px-5 md:hidden">
+      <div className="px-5 md:hidden border-2 border-black border-solid">
         <div className=" py-10 grid place-content-center">
           <div className="[&_span]:w-3 [&_span]:h-3 [&_span]:rounded-full [&_span]:bg-[#E0E0E0] flex gap-x-2">
             <span></span>
