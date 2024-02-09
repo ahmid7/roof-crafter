@@ -7,7 +7,7 @@ import { ButtonLeft, ButtonRight } from "./svgs";
 
 function HeroSection() {
   return (
-    <section className="flex flex-col md:flex-row border-2 border-solid border-red-900 h-full">
+    <section className="flex flex-col md:flex-row h-full">
       <Header />
       <div className="space-y-11 xl:space-y-[60px] pt-24 xl:pt-[114px] basis-1/2 container-spacing">
         <div className="space-y-5 xl:space-y-6 pr-0 lg:pr-16 xl:pr-[87px]">
@@ -26,7 +26,7 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="lg:pr-8 hidden md:inline-block">
+        <div className="lg:pr-8 hidden md:block">
           <div className="between">
             <p className="text-sm lg:text-base xl:text-xl leading-7 xl:leading-8 -tracking-[1.5%]">
               These brands trust us
@@ -65,7 +65,7 @@ function HeroSection() {
         </div>
       </div>
 
-      <div className="pt-6 px-5 md:pt-0 md:px-0 md:basis-1/2  border-2 border-solid border-green-900 md:h-inherit">
+      <div className="pt-6 px-5 md:pt-0 md:px-0 md:basis-1/2  md:h-inherit">
         <div className="relative w-full h-[469.88px] md:h-full">
           <Image
             priority
@@ -104,7 +104,7 @@ function HeroSection() {
         </div>
       </div>
 
-      <div className="px-5 md:hidden border-2 border-black border-solid">
+      <div className="px-5 md:hidden">
         <div className=" py-10 grid place-content-center">
           <div className="[&_span]:w-3 [&_span]:h-3 [&_span]:rounded-full [&_span]:bg-[#E0E0E0] flex gap-x-2">
             <span></span>

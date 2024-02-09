@@ -27,13 +27,13 @@ function Footer() {
           <LineWithStar />
         </div>
 
-        <div className="space-y-[52px] md:between-start">
-          <div className="flex flex-row items-start md:gap-x-[115px] xl:gap-x-[155px]">
+        <div className="space-y-[52px] md:space-y-0 md:between-start">
+          <div className="flex flex-row items-start md:gap-x-16 lg:gap-x-[115px] xl:gap-x-[155px]">
             <div className="w-full h-fit  md:w-fit md:h-fit grid place-content-center md:inline-flex">
               <Logo />
             </div>
 
-            <nav className="hidden md:flex items-start gap-x-[85px] xl:gap-x-[110px] font-normal text-base lg:text-xl xl:text-2xl [&_>]:leading-[21.48px] [&_>]:-tracking-[-2.5%]">
+            <nav className="hidden md:flex items-start md:gap-x-[60px] lg:gap-x-[85px] xl:gap-x-[110px] font-normal text-base lg:text-xl xl:text-2xl [&_>]:leading-[21.48px] [&_>]:-tracking-[-2.5%]">
               <ul className="flex flex-col gap-y-4 lg:gap-y-5 xl:gap-y-6">
                 <Link href="#">Our Works</Link>
                 <Link href="#">About Us</Link>
@@ -51,11 +51,11 @@ function Footer() {
             </nav>
           </div>
 
-          <div className="min-w-full md:min-w-[350px] xl:min-w-[440px]">
+          <div className="min-w-full md:min-w-[280px] lg:min-w-[350px] xl:min-w-[440px]">
             <ContactForm dark />
           </div>
 
-          <nav className="flex items-start gap-x-24 md:gap-x-[85px] xl:gap-x-[110px] font-normal text-base lg:text-xl xl:text-2xl [&_>]:leading-[21.48px] [&_>]:-tracking-[-2.5%]">
+          <nav className="flex md:hidden items-start gap-x-24 md:gap-x-[85px] xl:gap-x-[110px] font-normal text-base lg:text-xl xl:text-2xl [&_>]:leading-[21.48px] [&_>]:-tracking-[-2.5%]">
             <ul className="flex flex-col gap-y-4 lg:gap-y-5 xl:gap-y-6">
               <Link href="#">Our Works</Link>
               <Link href="#">About Us</Link>

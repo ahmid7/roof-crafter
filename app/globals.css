@@ -29,7 +29,7 @@
 }
 
 .header-style1 {
-  @apply text-[32px] md:text-3xl lg:text-4xl xl:text-[56px] text-black font-bold -tracking-[1.5%] leading-[38.4px] md:leading-[120%]
+  @apply text-[32px] md:text-3xl lg:text-4xl xl:text-[56px] text-black font-bold -tracking-[1.5%] leading-[38.4px] md:leading-[120%] lg:leading-[120%] xl:leading-[120%]
 }
 
 .header-style2 {
