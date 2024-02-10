@@ -114,7 +114,7 @@ function HeroSection() {
           </div>
         </div>
 
-        <ContactForm dark={ false } extraInfo />
+        <ContactForm dark={false} extraInfo />
       </div>
     </section>
   );
