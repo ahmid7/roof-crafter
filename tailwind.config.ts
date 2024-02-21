@@ -19,6 +19,15 @@ const config: Config = {
       },
       fontFamily: {
         neue: ['var(--font-neue)']
+      },
+      keyframes: {
+        pulseWidth: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(0.8)' },
+        }
+      },
+      animation: {
+        pulseWidth: 'pulseWidth 1s ease-in-out infinite'
       }
     },
   },

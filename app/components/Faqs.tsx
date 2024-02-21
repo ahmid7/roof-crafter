@@ -48,10 +48,10 @@ type QuestionProps = {
 
 const Question = ({ image, question, answer }: QuestionProps) => {
   return (
-    <div >
-      <div className="bg-[#F4F6FD] h-10 w-10 xl:h-12 xl:w-12 rounded-full p-7 xl:p-8 grid place-content-center ">
-        <div className="w-fit h-fit p-2 rounded-full bg-[#E2EAFE]">
-          <div className="w-5 h-5 xl:w-6 xl:h-6  relative grid place-content-center">
+    <div className="card">
+      <div className="relative z-30 size-10 xl:size-12 rounded-full p-7 xl:p-8 grid place-content-center ">
+        <div className="w-fit relative z-40 h-fit p-2 rounded-full bg-[#E2EAFE]">
+          <div className="size-5 xl:size-6  relative grid place-content-center">
             <Image
               src={`/assets/images/faqs/${image}`}
               alt="faq-icon"
@@ -62,6 +62,8 @@ const Question = ({ image, question, answer }: QuestionProps) => {
             />
           </div>
         </div>
+
+        <div className="absolute top-0 left-0 w-full h-full z-0 bg-[#eef0f7]  rounded-full animate-pulseWidth"  />
       </div>
 
       <div className="space-y-2 pt-2 md:pt-0">
