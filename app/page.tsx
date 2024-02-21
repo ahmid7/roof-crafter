@@ -19,10 +19,13 @@ export default function Home() {
 
   useGSAP(() => {
     gsap.to(".header-container", {
+      backdropFilter:"blur(16px)",
+      boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
       scrollTrigger: {
         trigger: Home.current,
-        start: "top top",
+        start: "1%",
         markers: true,
+        toggleActions: "play reset resume reset"
       }
     })
   }, { scope: Home })
