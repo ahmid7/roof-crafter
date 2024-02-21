@@ -57,7 +57,7 @@ const Card = ({ title, paragraph, imageSrc }: CardProps) => (
 function RecentProject() {
   return (
     <section className="pb-10 md:pb-8 lg:pb-10 xl:pb-12 container-spacing">
-      <div className="text-center">
+      <div className="text-center SubHeaders Header-Paragraph-Section">
         <h2 className="capitalize header-style2">
           recent roofing projects
         </h2>

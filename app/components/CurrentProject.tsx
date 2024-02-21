@@ -5,8 +5,8 @@ import Image from "next/image"
 function CurrentProject() {
   return (
     <section className='pt-12 md:pt-10 lg:pt-[50px] xl:pt-[60px] '>
-      <div className="text-center">
-        <h2 className="header-style2">
+      <div className="text-center Header-Paragraph-Section">
+        <h2 className="header-style2 ">
         What we have been up to
         </h2>
         <p className="paragraph-style1 pt-3 xl:pt-5 pb-10 xl:pb-12">

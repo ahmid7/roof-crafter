@@ -1,5 +1,6 @@
 "use client"
 
+
 import React from "react"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
@@ -11,13 +12,18 @@ import RecentProject from "./components/RecentProject";
 import CustomerReview from "./components/CustomerReview";
 import Faqs from "./components/Faqs";
 import Footer from "./components/Footer";
+import Header from "./components/Header"
 
 gsap.registerPlugin(ScrollTrigger)
 export default function Home() {
 
   const Home = React.useRef(null)
 
+  
   useGSAP(() => {
+    const HeaderWithParagraphs = gsap.utils.toArray(".Header-Paragraph-Section")
+
+    // nav-bar animation
     gsap.to(".header-container", {
       backdropFilter:"blur(16px)",
       boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
@@ -28,6 +34,20 @@ export default function Home() {
         toggleActions: "play reset resume reset"
       }
     })
+
+    // headers and paragraphs text animation
+
+    // HeaderWithParagraphs.forEach((section, index) => {
+    //   /* tslint:disable */
+    //   const headerWithParagraph = gsap.utils.selector(section)
+      
+    //   gsap.to(headerWithParagraph("h2"), {
+    //     border: '2px solid red'
+    //   })
+    // })
+
+
+  
   }, { scope: Home })
 
   return (

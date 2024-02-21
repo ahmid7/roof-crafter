@@ -1,17 +1,88 @@
+"use client"
+
 import React from "react";
 import Image from "next/image";
-import { LineDownward, LineTop } from "./svgs";
+import SplitType from 'split-type';
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useGSAP } from '@gsap/react'
 
+import { 
+  LineDownward, 
+  LineTop 
+} from "./svgs";
+
+
+gsap.registerPlugin(ScrollTrigger)
 function Services() {
+
+  const servicesRef = React.useRef(null)
+
+  useGSAP(() => {
+
+    function formatNumber(value:any, decimals:number) {
+      let s = (+value).toLocaleString('en-US').split(".");
+      return decimals ? s[0] + "." + ((s[1] || "") + "00000000").substring(0, decimals) : s[0];
+    }
+
+    const text = new SplitType('.ServiceHeaderText', { types: 'chars' })
+
+    gsap.from(text.chars, {
+      scrollTrigger: {
+        trigger: '.ServiceHeaderText',
+        start: "top 80%",
+        end: "top 20%",
+        scrub: true,
+        markers: true,
+      },
+      opacity: 0.4,
+      stagger: 0.5,
+    })
+
+
+    gsap.from(".numbers", {
+      textContent: 100,
+      duration: 2,
+      ease: "power1.inOut",
+      stagger: 0.2,
+      modifiers: {
+        textContent: value => formatNumber(value, 0) + "+"
+      },
+      scrollTrigger: {
+        trigger: ".numbers-container",
+        start: "100px 80%",
+        end: "+=100",
+        toggleActions: "play none none none",
+        markers: true
+      }
+    }) 
+
+    gsap.from('.number-container-inner', {
+      scrollTrigger: {
+        trigger: '.numbers-container',
+        start: "top 60%",
+        end: "top 20%",
+        markers: true,
+      },
+      opacity: 0.4,
+      yPercent: 10,
+      stagger: 0.2,
+      duration: 1,
+      ease: "power3"
+    })
+
+
+  }, { scope: servicesRef })
+
   return (
-    <section className="pt-12 md:pt-8 lg:pt-[60px]">
+    <section className="pt-12 md:pt-8 lg:pt-[60px]" ref ={ servicesRef }>
       <div className="">
         <div className="container-spacing  flex flex-col lg:flex-row gap-y-3 md:gap-y-2  lg:gap-x-8 xl:gap-x-10 items-start">
-          <h2 className=" font-medium text-3xl lg:text-4xl xl:text-[50px] leading-normal  md:leading-[50px] xl:leading-[67.2px] -tracking-[1.5%] xl:basis-[45%]">
+          <h2 className="font-medium text-3xl lg:text-4xl xl:text-[50px] leading-normal  md:leading-[50px] xl:leading-[67.2px] -tracking-[1.5%] xl:basis-[45%]">
             Building Trust Through Quality Roofing Services
           </h2>
 
-          <p className="paragraph-style2 lg:max-w-[500px] xl:max-w-[596px]">
+          <p className="ServiceHeaderText paragraph-style2 lg:max-w-[500px] xl:max-w-[596px]">
             At Skycrafters, we have been providing exceptional roofing services
             for over 20 years. Our commitment to quality craftsmanship,
             attention to detail, and customer satisfaction sets us apart from
@@ -33,16 +104,16 @@ function Services() {
                 <LineDownward />
               </div>
 
-              <div className=" md:start font-normal space-y-8 md:space-y-0 md:gap-x-12 xl:gap-x-[62px] pt-10 md:pt-6 xl:pt-[30px]">
-                <div>
-                  <h5 className="number-style">200+</h5>
-                  <p className="paragraph-style2 -tracking-[0.5%] pt-2 xl:pt-[21px]">
+              <div className=" md:start font-normal space-y-8 md:space-y-0 md:gap-x-12 xl:gap-x-[62px] pt-10 md:pt-6 xl:pt-[30px] numbers-container">
+                <div className="number-container-inner xl:min-w-[260px]">
+                  <h5 className="number-style numbers">200</h5>
+                  <p className="paragraph-style2 -tracking-[0.5%] pt-2 xl:pt-[21px] ">
                     Customers served over the years
                   </p>
                 </div>
 
-                <div>
-                  <h5 className="number-style">400+</h5>
+                <div className="number-container-inner xl:min-w-[260px]">
+                  <h5 className="number-style numbers">400</h5>
                   <p className="-tracking-[0.5%] paragraph-style2 pt-2 xl:pt-[21px]">
                     Roofs restored and making people so happy
                   </p>
