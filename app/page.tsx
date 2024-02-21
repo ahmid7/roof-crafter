@@ -38,11 +38,14 @@ export default function Home() {
     // headers and paragraphs text animation
 
     // HeaderWithParagraphs.forEach((section, index) => {
-    //   /* tslint:disable */
     //   const headerWithParagraph = gsap.utils.selector(section)
       
     //   gsap.to(headerWithParagraph("h2"), {
     //     border: '2px solid red'
+    //   })
+
+    //   gsap.to(headerWithParagraph("p"), {
+
     //   })
     // })
 

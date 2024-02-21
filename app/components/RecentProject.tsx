@@ -30,20 +30,18 @@ const services = [
 ];
 
 const Card = ({ title, paragraph, imageSrc }: CardProps) => (
-  <div className="w-full h-[470px] md:h-[450px] xl:h-[625px] relative ">
+  <div className="w-full group transition ease-in-out transition-700 h-[470px] md:h-[450px] xl:h-[625px] relative overflow-hidden">
     
-    <div className="absolute top-0 left-0 w-full h-full z-10 "/>
-
     <Image 
       alt={`${title}-image`} 
-      className="object-center overlay-gradient z-0 bg-[linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%), lightgray 50%]"
+      className="object-cover group-hover:scale-x-125 transition ease-in-out transition-700 z-0"
       src={imageSrc} 
       fill 
       quality={100} 
       priority 
     />
 
-    <div className="absolute bottom-5 left-0 w-full px-4 md:px-5 lg:px-8 xl:px-10 space-y-3 xl:space-y-6">
+    <div className=" absolute bottom-5 left-0 w-full px-4 md:px-5 lg:px-8 xl:px-10 space-y-3 xl:space-y-6">
       <h4 className="md:max-w-[300px] lg:max-w-[560px] header-style2 text-white capitalize ">
         {title}
       </h4>
