@@ -1,5 +1,10 @@
+"use client"
+
 import React from "react";
 import Image from "next/image";
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useGSAP } from '@gsap/react'
 
 const FAQsData = [
   {
@@ -46,6 +51,8 @@ type QuestionProps = {
   answer: string;
 };
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Question = ({ image, question, answer }: QuestionProps) => {
   return (
     <div className="card">
@@ -78,9 +85,29 @@ const Question = ({ image, question, answer }: QuestionProps) => {
   );
 };
 
+
+
 function Faqs() {
+
+  const FAQsRef = React.useRef(null)
+
+  useGSAP(() => {
+    gsap.from(".card", {
+      yPercent: 50,
+      opacity: 0.4,
+      stagger: 0.2,
+      ease: "power3",
+      duration:0.6,
+      scrollTrigger: {
+        trigger: ".QA-Container",
+        markers: true,
+        start: "top 70%",
+      }
+    })
+  }, { scope: FAQsRef })
+  
   return (
-    <section className="container-spacing">
+    <section className="container-spacing" ref={ FAQsRef }>
       <div className="max-w-[768px] space-y-3 lg:space-y-4 xl:space-y-5">
         <h3 className="header-style2 -tracking-[1.5%] text-[#101828]">
           FAQs
@@ -92,7 +119,7 @@ function Faqs() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 lg:gap-x-5 xl:gap-x-8 gap-y-8 lg:gap-y-12 xl:gap-y-16 pt-8 lg:pt-12 xl:pt-16">
+      <div className="QA-Container grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 lg:gap-x-5 xl:gap-x-8 gap-y-8 lg:gap-y-12 xl:gap-y-16 pt-8 lg:pt-12 xl:pt-16">
         {FAQsData.map((data, index) => (
           <Question
             key={ data.question + index }

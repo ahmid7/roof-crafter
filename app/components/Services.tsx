@@ -33,7 +33,6 @@ function Services() {
         start: "top 80%",
         end: "top 20%",
         scrub: true,
-        markers: true,
       },
       opacity: 0.4,
       stagger: 0.5,
@@ -53,7 +52,6 @@ function Services() {
         start: "100px 80%",
         end: "+=100",
         toggleActions: "play none none none",
-        markers: true
       }
     }) 
 
@@ -62,7 +60,6 @@ function Services() {
         trigger: '.numbers-container',
         start: "top 60%",
         end: "top 20%",
-        markers: true,
       },
       opacity: 0.4,
       yPercent: 10,

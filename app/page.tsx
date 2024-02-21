@@ -30,7 +30,6 @@ export default function Home() {
       scrollTrigger: {
         trigger: Home.current,
         start: "1%",
-        markers: true,
         toggleActions: "play reset resume reset"
       }
     })
