@@ -97,10 +97,9 @@ function Faqs() {
       opacity: 0.4,
       stagger: 0.2,
       ease: "power3",
-      duration:0.6,
+      duration:0.8,
       scrollTrigger: {
         trigger: ".QA-Container",
-        markers: true,
         start: "top 70%",
       }
     })

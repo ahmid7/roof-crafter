@@ -1,10 +1,44 @@
 import React from 'react'
 import { ButtonLeft, ButtonRight, Stars } from './svgs'
 import Image from "next/image"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useGSAP } from '@gsap/react'
 
+
+gsap.registerPlugin(ScrollTrigger)
 function CurrentProject() {
+
+  const CurrentProjectRef = React.useRef(null)
+
+  useGSAP(() => {
+    gsap.to(".project-t-image", {
+      // backgroundSize: "400%",
+      scale:1.2,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".project-t-image",
+        start: "top 75%",
+        end: "bottom top",
+        markers: true,
+        scrub: 0.5
+      }
+    });
+
+    gsap.fromTo(".project-t-text", { xPercent: 100 } ,{
+      xPercent: -150,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".project-t-image",
+        start: "top 75%",
+        end: "bottom top",
+        scrub: 1
+      }
+    });
+  }, { scope: CurrentProjectRef })
+
   return (
-    <section className='pt-12 md:pt-10 lg:pt-[50px] xl:pt-[60px] '>
+    <section className='pt-12 md:pt-10 lg:pt-[50px] xl:pt-[60px] ' ref={ CurrentProjectRef }>
       <div className="text-center Header-Paragraph-Section">
         <h2 className="header-style2 ">
         What we have been up to
@@ -50,15 +84,19 @@ function CurrentProject() {
         </div>
       </div>
 
-      <div className='my-8 lg:my-16 xl:my-20 relative w-full h-[450px] lg:h-[550px] xl:h-[600px] '>
+      <div className='my-8  lg:my-16 xl:my-20 relative w-full h-[450px] lg:h-[550px] xl:h-[600px] overflow-hidden' >
         <Image
           alt='project-image'
-          className="object-cover z-0"
+          className="object-cover z-0 project-t-image"
           src="/assets/images/projectImage.png"
           fill
           priority
           quality={100}
         />
+
+        <h2 className='text-[350px] w-full h-full text-mirage-black text-opacity-60 border-solid border-2 absolute grid place-content-center text-nowrap' >
+          <span className='project-t-text text-nowrap'>Project T</span>
+        </h2>
 
       </div>
 
