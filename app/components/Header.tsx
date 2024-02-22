@@ -11,7 +11,7 @@ function Header() {
   return (
     <header className="bg-transparent between container-spacing px-8 xl:px-10 fixed top-0 left-0 w-full py-0 md:py-3 z-50 header-container" ref={Header}>
       <nav className="hidden md:inline-block">
-        <ul className="between gap-x-4 lg:gap-x-5 xl:gap-x-8 text-mirage-black leading-6 text-sm lg:text-base -tracking-[0.08px] ">
+        <ul className="between  gap-x-4 lg:gap-x-5 xl:gap-x-8 text-mirage-black nav-list-wrapper leading-6 text-sm lg:text-base -tracking-[0.08px] ">
           <li>Home</li>
           <li>About</li>
           <li>Contact</li>
@@ -23,7 +23,7 @@ function Header() {
           alt="company-logo"
           src="/assets/svg/CompanyLogo.svg"
           fill
-          className="object-cover"
+          className="object-cover "
           priority
           quality={ 100 }
         />

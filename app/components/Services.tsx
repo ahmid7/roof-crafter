@@ -29,10 +29,10 @@ function Services() {
 
     gsap.from(text.chars, {
       scrollTrigger: {
-        trigger: '.ServiceHeaderText',
-        start: "top 80%",
-        end: "top 20%",
-        scrub: true,
+        trigger: ".ServiceHeaderContainer",
+        scrub: 0.8,
+        end: "top 15%",
+        markers: true,
       },
       opacity: 0.4,
       stagger: 0.5,
@@ -41,7 +41,7 @@ function Services() {
 
     gsap.from(".numbers", {
       textContent: 100,
-      duration: 2,
+      duration: 1.6,
       ease: "power1.inOut",
       stagger: 0.2,
       modifiers: {
@@ -74,7 +74,7 @@ function Services() {
   return (
     <section className="pt-12 md:pt-8 lg:pt-[60px]" ref ={ servicesRef }>
       <div className="">
-        <div className="container-spacing  flex flex-col lg:flex-row gap-y-3 md:gap-y-2  lg:gap-x-8 xl:gap-x-10 items-start">
+        <div className="container-spacing  flex flex-col lg:flex-row gap-y-3 md:gap-y-2  lg:gap-x-8 xl:gap-x-10 items-start ServiceHeaderContainer">
           <h2 className="font-medium text-3xl lg:text-4xl xl:text-[50px] leading-normal  md:leading-[50px] xl:leading-[67.2px] -tracking-[1.5%] xl:basis-[45%]">
             Building Trust Through Quality Roofing Services
           </h2>

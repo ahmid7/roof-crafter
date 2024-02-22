@@ -34,7 +34,7 @@ const Card = ({ title, paragraph, imageSrc }: CardProps) => (
     
     <Image 
       alt={`${title}-image`} 
-      className="object-cover group-hover:scale-x-125 transition ease-in-out transition-700 z-0"
+      className="object-cover group-hover:scale-110 transition ease-in-out transition-700 z-0"
       src={imageSrc} 
       fill 
       quality={100} 

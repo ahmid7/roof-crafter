@@ -14,13 +14,12 @@ function CurrentProject() {
   useGSAP(() => {
     gsap.to(".project-t-image", {
       // backgroundSize: "400%",
-      scale:1.2,
+      scale:1.5,
       ease: "none",
       scrollTrigger: {
         trigger: ".project-t-image",
         start: "top 75%",
         end: "bottom top",
-        markers: true,
         scrub: 0.5
       }
     });

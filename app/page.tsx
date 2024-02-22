@@ -25,12 +25,21 @@ export default function Home() {
 
     // nav-bar animation
     gsap.to(".header-container", {
-      backdropFilter:"blur(16px)",
+      backdropFilter:"blur(50px)",
       boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
       scrollTrigger: {
         trigger: Home.current,
         start: "1%",
         toggleActions: "play reset resume reset"
+      }
+    })
+
+    gsap.to(".nav-list-wrapper", {
+      color: '#FFF',
+      scrollTrigger: {
+        trigger: ".footer-section2",
+        start: "top top",
+        toggleActions: "play reverse resume reverse",
       }
     })
 
@@ -44,7 +53,7 @@ export default function Home() {
     //   })
 
     //   gsap.to(headerWithParagraph("p"), {
-
+            
     //   })
     // })
 
