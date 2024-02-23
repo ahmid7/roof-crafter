@@ -15,10 +15,11 @@ function Footer() {
             Let's create <br /> magic together{" "}
           </p>
 
-          <button className="gap-x-5 xl:gap-x-6 border border-solid border-white flex items-center  rounded-[32px] px-5 py-4 md:px-8 md:py-5 stroke-[#ffff]">
-            <span className="text-base lg:text-lg xl:text-xl leading-[14px] xl:leading-[17.9px]">
+          <button className="gap-x-5 xl:gap-x-6 outline outline-1 hover:outline-none flex items-center  rounded-[32px] px-5 py-4 md:px-8 md:py-5 stroke-[#ffff] hover:stroke-mirage-black form-button group after:bg-white">
+            <span className="text-base lg:text-lg xl:text-xl leading-[14px] xl:leading-[17.9px] group-hover:text-mirage-black">
               Send us a message
             </span>
+
             <ArrowRight />
           </button>
         </div>

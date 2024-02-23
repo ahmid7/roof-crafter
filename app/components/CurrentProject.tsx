@@ -1,9 +1,10 @@
 import React from 'react'
-import { ButtonLeft, ButtonRight, Stars } from './svgs'
 import Image from "next/image"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from '@gsap/react'
+
+import { ButtonLeft, ButtonRight, Stars } from './svgs'
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -39,15 +40,15 @@ function CurrentProject() {
   return (
     <section className='pt-12 md:pt-10 lg:pt-[50px] xl:pt-[60px] ' ref={ CurrentProjectRef }>
       <div className="text-center Header-Paragraph-Section">
-        <h2 className="header-style2 ">
-        What we have been up to
+        <h2 className="header-style2 overflow-hidden">
+          <span className='inline-block'>What we have been up to</span>
         </h2>
-        <p className="paragraph-style1 pt-3 xl:pt-5 pb-10 xl:pb-12">
-          Take a look at our recent roofing projects.
+        <p className="mt-3 xl:mt-5 mb-10 xl:mb-12 overflow-hidden">
+          <span className='paragraph-style1 inline-block'>Take a look at our recent roofing projects.</span> 
         </p>
       </div>
 
-      <div className=' md:pt-10 lg:pt-[50px] xl:pt-20'>
+      <div className=' md:mt-10 lg:mt-[50px] xl:mt-20'>
         <div className=' md:between-start space-y-8 gap-x-16 xl:gap-x-20'>
           <div className='space-y-4 xl:space-y-6'>
             <h1 className='header-style2'>Project T</h1>

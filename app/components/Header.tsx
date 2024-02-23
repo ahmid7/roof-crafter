@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import gsap from "gsap"
+import Link from 'next/link'
 
 import { Hamburger } from "./svgs";
 
@@ -12,9 +12,17 @@ function Header() {
     <header className="bg-transparent between container-spacing px-8 xl:px-10 fixed top-0 left-0 w-full py-0 md:py-3 z-50 header-container" ref={Header}>
       <nav className="hidden md:inline-block">
         <ul className="between  gap-x-4 lg:gap-x-5 xl:gap-x-8 text-mirage-black nav-list-wrapper leading-6 text-sm lg:text-base -tracking-[0.08px] ">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <Link href="Home">
+            Home
+          </Link>
+          
+          <Link href="About">
+            About
+          </Link>
+
+          <Link href="Contact">
+            Contact
+          </Link>
         </ul>
       </nav>
 
