@@ -30,8 +30,10 @@ const services = [
 ];
 
 const Card = ({ title, paragraph, imageSrc }: CardProps) => (
-  <div className="w-full group transition ease-in-out transition-700 h-[470px] md:h-[450px] xl:h-[625px] relative overflow-hidden">
+  <div className="border-solid w-full group transition ease-in-out transition-700 h-[470px] md:h-[450px] xl:h-[625px] relative overflow-hidden">
     
+    <div className="image-gradient-overlay"/>
+
     <Image 
       alt={`${title}-image`} 
       className="object-cover group-hover:scale-110 transition ease-in-out transition-700 z-0"
@@ -41,7 +43,7 @@ const Card = ({ title, paragraph, imageSrc }: CardProps) => (
       priority 
     />
 
-    <div className=" absolute bottom-5 left-0 w-full px-4 md:px-5 lg:px-8 xl:px-10 space-y-3 xl:space-y-6">
+    <div className=" absolute z-20 bottom-5 left-0 w-full px-4 md:px-5 lg:px-8 xl:px-10 space-y-3 xl:space-y-6">
       <h4 className="md:max-w-[300px] lg:max-w-[560px] header-style2 text-white capitalize ">
         {title}
       </h4>
