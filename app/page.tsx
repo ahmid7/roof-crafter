@@ -32,10 +32,11 @@ export default function Home() {
       }
     })
 
-    gsap.to(".nav-list-wrapper", {
-      color: '#FFF',
+    gsap.to(".header-container", {
+      // backdropFilter:"blur(12px)",
+      backgroundColor: "#FFF",
       scrollTrigger: {
-        trigger: ".footer-section2",
+        trigger: '.footer-section2',
         start: "top top",
         toggleActions: "play reverse resume reverse",
       }
@@ -51,7 +52,6 @@ export default function Home() {
         duration: 1,
         scrollTrigger: {
           trigger: headerWithParagraph('h2'),
-          markers: true,
           start: "top 80%",
         }
       })
@@ -61,7 +61,6 @@ export default function Home() {
         duration: 1,
         scrollTrigger: {
           trigger: headerWithParagraph('h2'),
-          markers: true,
           start: "top 80%"
         }
       })

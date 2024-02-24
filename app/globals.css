@@ -60,11 +60,15 @@
   background: linear-gradient(white, black);
 }
 
-.nav-list-wrapper a {
+.nav-list-wrapper a, .footer-links a {
   position: relative;
 }
 
-.nav-list-wrapper a::before {
+.footer-links a {
+  width: fit-content
+}
+
+.nav-list-wrapper a::before, .footer-links a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -78,7 +82,13 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.nav-list-wrapper a:hover::before {
+.footer-links a::before {
+  background-color: #fff;
+}
+
+
+
+.nav-list-wrapper a:hover::before, .footer-links a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
   -webkit-transform: scaleX(1);
@@ -91,15 +101,15 @@
   position: relative;
   overflow: hidden;
   will-change: transform;
-  transition: .2s transform ease-in-out;
-  -webkit-transition: .2s transform ease-in-out;
-  -moz-transition: .2s transform ease-in-out;
-  -ms-transition: .2s transform ease-in-out;
-  -o-transition: .2s transform ease-in-out;
+  transition: .4s transform ease-in-out;
+  -webkit-transition: .4s transform ease-in-out;
+  -moz-transition: .4s transform ease-in-out;
+  -ms-transition: .4s transform ease-in-out;
+  -o-transition: .4s transform ease-in-out;
 }
 
 .form-button::after {
-  border-radius: 32px;
+  /* border-radius: 32px; */
   display: inline-block;
   content: "";
   height: 100%;
@@ -109,13 +119,17 @@
   top: 0;
   transform: translate(-100%, 0) rotate(10deg);
   transform-origin: top left;
-  transition: 0.2s transform ease-out;
+  transition: 0.5s transform ease-out;
   will-change: transform;
   z-index: -1;
   -webkit-border-radius: 32px;
   -moz-border-radius: 32px;
   -ms-border-radius: 32px;
   -o-border-radius: 32px;
+  -webkit-transition: 0.4s transform ease-out;
+  -moz-transition: 0.5s transform ease-out;
+  -ms-transition: 0.5s transform ease-out;
+  -o-transition: 0.5s transform ease-out;
 }
 
 .form-button:hover::after {

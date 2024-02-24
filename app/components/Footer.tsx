@@ -1,12 +1,30 @@
 import Image from "next/image";
 import React from "react";
-import { ArrowRight, LineWithStar, Logo, RightReservedIcon } from "./svgs";
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import Link from "next/link";
 import ContactForm from "./ContactForm";
+import { 
+  ArrowRight, 
+  LineWithStar,
+  Logo, 
+  RightReservedIcon 
+} from "./svgs";
 
+
+gsap.registerPlugin(ScrollTrigger)
 function Footer() {
+
+  const FooterRef = React.useRef(null)
+
+  useGSAP(() => {
+    
+  }, { scope: FooterRef })
+
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden" ref={ FooterRef }>
       <GetInTouch />
 
       <div className="bg-[#070A0E] pt-7 md:pt-11 lg:pt-[50px] xl:pt-[60px] container-spacing text-white footer-section2">
@@ -35,7 +53,7 @@ function Footer() {
             </div>
 
             <nav className="hidden md:flex items-start md:gap-x-[60px] lg:gap-x-[85px] xl:gap-x-[110px] font-normal text-base lg:text-xl xl:text-2xl [&_>]:leading-[21.48px] [&_>]:-tracking-[-2.5%]">
-              <ul className="flex flex-col gap-y-4 lg:gap-y-5 xl:gap-y-6">
+              <ul className="flex flex-col gap-y-4 lg:gap-y-5 xl:gap-y-6 footer-links LinkSection1">
                 <Link href="#">Our Works</Link>
                 <Link href="#">About Us</Link>
                 <Link href="#">Service</Link>
@@ -43,7 +61,7 @@ function Footer() {
                 <Link href="#">Our Team</Link>
               </ul>
 
-              <ul className="flex flex-col gap-y-4 lg:gap-y-5 xl:gap-y-6">
+              <ul className="flex flex-col gap-y-4 lg:gap-y-5 xl:gap-y-6 footer-links LinkSection2">
                 <Link href="#">Linkedin</Link>
                 <Link href="#">Instagram</Link>
                 <Link href="#">Twitter</Link>
