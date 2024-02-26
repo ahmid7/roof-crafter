@@ -76,7 +76,7 @@ const Question = ({ image, question, answer }: QuestionProps) => {
 
         <div className="space-y-2 pt-2 md:pt-0">
           <h5 className="text-[#101828] paragraph-style3 ">{question}</h5>
-          <p className="font-normal text-base md:text-sm xl:text-base leading-6 md:leading-5 xl:leading-6 -tracking-[0.5%] text-[#475467]">
+          <p className="font-normal text-sm xl:text-base leading-relaxed md:leading-5 xl:leading-6 -tracking-[0.5%] text-[#475467]">
             {answer}
           </p>
         </div>
@@ -106,7 +106,7 @@ function Faqs() {
   );
 
   return (
-    <section className="container-spacing" ref={FAQsRef}>
+    <section className="container-spacing pt-3 md:pt-0 " ref={FAQsRef}>
       <div className="max-w-[768px] space-y-3 lg:space-y-4 xl:space-y-5">
         <h3 className="header-style2 -tracking-[1.5%] text-[#101828]">FAQs</h3>
 

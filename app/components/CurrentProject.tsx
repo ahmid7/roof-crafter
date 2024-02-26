@@ -14,7 +14,6 @@ function CurrentProject() {
 
   useGSAP(() => {
     gsap.to(".project-t-image", {
-      // backgroundSize: "400%",
       scale:1.5,
       ease: "none",
       scrollTrigger: {
@@ -43,14 +42,15 @@ function CurrentProject() {
         <h2 className="header-style2 overflow-hidden">
           <span className='inline-block'>What we have been up to</span>
         </h2>
-        <p className="mt-3 xl:mt-5 mb-10 xl:mb-12 overflow-hidden">
+
+        <p className="mt-1.5 md:mt-3 xl:mt-5 mb-10 xl:mb-12 overflow-hidden">
           <span className='paragraph-style1 inline-block'>Take a look at our recent roofing projects.</span> 
         </p>
       </div>
 
       <div className=' md:mt-10 lg:mt-[50px] xl:mt-20'>
         <div className=' md:between-start space-y-8 gap-x-16 xl:gap-x-20'>
-          <div className='space-y-4 xl:space-y-6'>
+          <div className='space-y-5 md:space-y-4 xl:space-y-6'>
             <h1 className='header-style2'>Project T</h1>
             <p className='paragraph-style2 -tracking-[0.5%]'>Project T involved the meticulous installation of a cutting-edge cool roof system, enhancing energy efficiency and reducing cooling costs.</p>
 
@@ -60,7 +60,7 @@ function CurrentProject() {
             </div>
           </div>
 
-          <div className='basis-[464px] grid grid-cols-2 gap-y-6 xl:gap-y-8 text-base md:text-sm xl:text-base [&_p]:font-bold [&_p]:leading-5 [&_p]:xl:leading-6 [&_p]:-tracking-[0.05%] [&_small]:font-normal [&_small]:leading-5 [&_small]:xl:leading-6 [&_small]:-tracking-[0.5%] [&_p]:pb-1 [&_p]:xl:pb-2'>
+          <div className='basis-[464px] grid grid-cols-2 gap-y-6 xl:gap-y-8 text-sm xl:text-base [&_p]:font-bold [&_p]:leading-5 [&_p]:xl:leading-6 [&_p]:-tracking-[0.05%] [&_small]:font-normal [&_small]:leading-5 [&_small]:xl:leading-6 [&_small]:-tracking-[0.5%] [&_p]:pb-1 [&_p]:xl:pb-2'>
             <div>
               <p>Client</p>
               <small className=''>John Smith</small>
@@ -94,7 +94,7 @@ function CurrentProject() {
           quality={100}
         />
 
-        <h2 className='text-[350px] w-full h-full text-mirage-black text-opacity-60 border-solid border-2 absolute grid place-content-center text-nowrap' >
+        <h2 className='text-[100px] md:text-[180px] lg:text-[260px] xl:text-[350px] w-full h-full text-mirage-black text-opacity-60 border-solid border-2 absolute grid place-content-center text-nowrap' >
           <span className='project-t-text text-nowrap'>Project T</span>
         </h2>
 

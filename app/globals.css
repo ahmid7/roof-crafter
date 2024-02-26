@@ -28,8 +28,12 @@
   @apply font-neue;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header-style1 {
-  @apply text-[32px] md:text-3xl lg:text-4xl xl:text-[56px] text-black font-bold -tracking-[1.5%] leading-[38.4px] md:leading-[120%] lg:leading-[120%] xl:leading-[120%];
+  @apply text-[32px] md:text-3xl lg:text-4xl xl:text-[56px] text-black font-bold -tracking-[1.5%] leading-[39px] md:leading-[120%] lg:leading-[120%] xl:leading-[120%];
 }
 
 .header-style2 {
@@ -37,15 +41,15 @@
 }
 
 .paragraph-style1 {
-  @apply text-base lg:text-lg xl:text-xl leading-6 lg:leading-[26px] xl:leading-[30px] -tracking-[0.5%] font-normal;
+  @apply text-base lg:text-lg xl:text-xl leading-normal lg:leading-[26px] xl:leading-[30px] -tracking-[0.5%] font-normal;
 }
 
 .paragraph-style2 {
-  @apply text-base md:text-sm lg:text-base xl:text-lg font-normal leading-6 md:leading-5 lg:leading-6 xl:leading-[27px];
+  @apply text-base md:text-sm lg:text-base xl:text-lg font-normal leading-relaxed md:leading-5 lg:leading-6 xl:leading-[27px];
 }
 
 .paragraph-style3 {
-  @apply text-base md:text-sm lg:text-base xl:text-lg font-medium leading-6 md:leading-5 lg:leading-6 xl:leading-[27px];
+  @apply text-base md:text-sm lg:text-base xl:text-lg font-medium leading-relaxed md:leading-5 lg:leading-6 xl:leading-[27px];
 }
 
 .container-spacing {
@@ -85,7 +89,6 @@
 .footer-links a::before {
   background-color: #fff;
 }
-
 
 
 .nav-list-wrapper a:hover::before, .footer-links a:hover::before {

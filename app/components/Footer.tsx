@@ -20,14 +20,21 @@ function Footer() {
   const FooterRef = React.useRef(null)
 
   useGSAP(() => {
-    
+    gsap.from('.line-animation', {
+      scaleX: 1,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: ".line-animation",
+        start: 'top 95%'
+      }
+    })
   }, { scope: FooterRef })
 
   return (
     <section className="overflow-hidden" ref={ FooterRef }>
       <GetInTouch />
 
-      <div className="bg-[#070A0E] pt-7 md:pt-11 lg:pt-[50px] xl:pt-[60px] container-spacing text-white footer-section2">
+      <div className="bg-[#070A0E] pt-7 md:pt-11 lg:pt-[50px] xl:pt-[60px] container-spacing text-white footer-section2" id="Contact">
         <div className="space-y-5 md:space-y-4 xl:space-y-5 font-medium">
           <p className="text-5xl md:text-7xl xl:text-8xl leading-[45px] md:leading-[70px] xl:leading-[85.92px] -tracking-[2.5%]">
             Let's create <br /> magic together{" "}
@@ -42,13 +49,15 @@ function Footer() {
           </button>
         </div>
 
-        <div className="py-7 md:py-8 lg:py-12 xl:py-[75px] ">
+        <div className="my-7 md:my-8 lg:my-12 xl:my-[75px] w-full relative">
           <LineWithStar />
+
+          <div className="line-animation absolute top-0 left-0 w-full h-full  scale-x-0 origin-right  bg-[#070a0e]"/>
         </div>
 
         <div className="space-y-[52px] md:space-y-0 md:between-start">
           <div className="flex flex-row items-start md:gap-x-16 lg:gap-x-[115px] xl:gap-x-[155px]">
-            <div className="w-full h-fit  md:w-fit md:h-fit grid place-content-center md:inline-flex">
+            <div className="w-full h-fit  md:w-fit md:h-fit grid place-content-center md:inline-flex ">
               <Logo />
             </div>
 
@@ -101,7 +110,9 @@ function Footer() {
             <RightReservedIcon />
           </p>
 
-          <p className="font-medium leading-6 xl:leading-[27px]">Back to Top</p>
+          <p className="font-medium leading-6 xl:leading-[27px]">
+            <a href="#">Back to Top</a>
+          </p>
         </div>
       </div>
     </section>

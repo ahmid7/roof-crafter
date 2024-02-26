@@ -35,9 +35,10 @@ export default function Home() {
     gsap.to(".header-container", {
       // backdropFilter:"blur(12px)",
       backgroundColor: "#FFF",
+      ease: "power1.out",
       scrollTrigger: {
         trigger: '.footer-section2',
-        start: "top top",
+        start: "top 5%",
         toggleActions: "play reverse resume reverse",
       }
     })

@@ -1,15 +1,29 @@
 import React from "react";
 import Image from "next/image";
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Header from "./Header";
 import ContactForm from "./ContactForm";
 import { ButtonLeft, ButtonRight } from "./svgs";
 
 function HeroSection() {
+
+  const HeroSectionRef = React.useRef(null)
+
+  useGSAP(() => {
+    gsap.from(".left-section", {
+      opacity: 0.1,
+      yPercent: 6,
+      duration: 1.5,
+    })
+  }, { scope: HeroSectionRef })
+
   return (
-    <section className="flex flex-col md:flex-row h-full">
+    <section className="flex flex-col md:flex-row h-full" ref={HeroSectionRef}>
       <Header />
-      <div className="space-y-11 xl:space-y-[60px] pt-24 xl:pt-[114px] basis-1/2 container-spacing">
+      <div className="space-y-11 xl:space-y-[60px] pt-24 xl:pt-[114px] basis-1/2 container-spacing left-section" >
         <div className="space-y-5 xl:space-y-6 pr-0 lg:pr-16 xl:pr-[87px]">
           <h2 className="header-style1">
             Trusted Roofing Services for Your Home

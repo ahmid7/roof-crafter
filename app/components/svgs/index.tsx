@@ -99,11 +99,11 @@ export const ButtonLeft = () => (
       width="47"
       height="47"
       rx="23.5"
-      className="stroke-current text-inherit "
+      className="stroke-current text-inherit border-2 border-solid border-red-900"
     />
     <path
       d="M32 23.8889H19.83L25.42 18.2989L24 16.8889L16 24.8889L24 32.8889L25.41 31.4789L19.83 25.8889H32V23.8889Z"
-      className="fill-current text-inherit"
+      className="fill-current text-inherit border-2 border-solid border-red-900 bg-red-900"
     />
   </svg>
 );
@@ -134,7 +134,7 @@ export const ButtonRight = () => (
 
 export const LineWithStar = () => (
   <svg
-    className="w-inherit h-inherit md:w-[1360px] md:h-[46px]"
+    className="w-full h-9  md:w-full overflow-hidden md:h-[46px]"
     viewBox="0 0 1360 46"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

@@ -40,7 +40,7 @@ function Services() {
 
     gsap.from(".numbers", {
       textContent: 100,
-      duration: 1.6,
+      duration: 1.2,
       ease: "power1.inOut",
       stagger: 0.2,
       modifiers: {
@@ -71,7 +71,7 @@ function Services() {
   }, { scope: servicesRef })
 
   return (
-    <section className="pt-12 md:pt-8 lg:pt-[60px]" ref ={ servicesRef }>
+    <section className="pt-7 md:pt-8 lg:pt-[60px]" id="About" ref ={ servicesRef }>
       <div className="">
         <div className="container-spacing  flex flex-col lg:flex-row gap-y-3 md:gap-y-2  lg:gap-x-8 xl:gap-x-10 items-start ServiceHeaderContainer">
           <h2 className="font-medium text-3xl lg:text-4xl xl:text-[50px] leading-normal  md:leading-[50px] xl:leading-[67.2px] -tracking-[1.5%] xl:basis-[45%]">
@@ -92,7 +92,7 @@ function Services() {
             <LineTop />
           </div>
 
-          <div className="relative md:h-[650px] lg:h-[850px] xl:h-[1246px] gap-x-[50px] xl:gap-x-[80px] flex">
+          <div className="relative md:h-[620px] lg:h-[850px] xl:h-[1246px] gap-x-[50px] xl:gap-x-[80px] flex">
             <div className="hidden md:inline-flex md:basis-[65%] xl:basis-[36%] container-spacing" />
 
             <div className=" flex md:gap-x-16 xl:gap-x-[111px] container-spacing">
@@ -101,14 +101,14 @@ function Services() {
               </div>
 
               <div className=" md:start font-normal space-y-8 md:space-y-0 md:gap-x-12 xl:gap-x-[62px] pt-10 md:pt-6 xl:pt-[30px] numbers-container">
-                <div className="number-container-inner xl:min-w-[260px]">
+                <div className="number-container-inner lg:min-w-[227.5px] xl:min-w-[260px]">
                   <h5 className="number-style numbers">200</h5>
                   <p className="paragraph-style2 -tracking-[0.5%] pt-2 xl:pt-[21px] ">
                     Customers served over the years
                   </p>
                 </div>
 
-                <div className="number-container-inner xl:min-w-[260px]">
+                <div className="number-container-inner lg:min-w-[227.5px] xl:min-w-[260px]">
                   <h5 className="number-style numbers">400</h5>
                   <p className="-tracking-[0.5%] paragraph-style2 pt-2 xl:pt-[21px]">
                     Roofs restored and making people so happy

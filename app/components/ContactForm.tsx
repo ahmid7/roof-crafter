@@ -22,7 +22,7 @@ type ContactForm = {
 const Input: React.FC<Input> = ({ type, label, name, dark }) => {
   return (
     <div
-      className={`flex flex-col gap-y-1 ${
+      className={`flex flex-col gap-y-1.5 md:gap-y-1 ${
         dark ? "text-white" : "text-mirage-black"
       }`}
     >

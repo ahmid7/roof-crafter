@@ -71,7 +71,7 @@ const Review = ({ paragraph, name, titleHeld, imageSrc }: ReviewProps) => {
 
 function CustomerReview() {
   return (
-    <section className="container-spacing pt-4 md:pt-0 pb-10 md:pb-8 lg:pb-[60px]">
+    <section className="container-spacing pt-3 md:pt-0 pb-10 md:pb-8 lg:pb-[60px] ">
       <div className="text-center Header-Paragraph-Section">
         <h2 className="header-style2 overflow-hidden">
            <span className="inline-block">Hey, don’t just take our word for it</span> 
