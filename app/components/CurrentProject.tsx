@@ -54,7 +54,7 @@ function CurrentProject() {
             <h1 className='header-style2'>Project T</h1>
             <p className='paragraph-style2 -tracking-[0.5%]'>Project T involved the meticulous installation of a cutting-edge cool roof system, enhancing energy efficiency and reducing cooling costs.</p>
 
-            <div className='font-normal text-sm [&_span]:leading-[21px] [&_span]:rounded-[20px] space-x-2'>
+            <div className='font-normal text-xs md:text-sm [&_span]:leading-[21px] [&_span]:rounded-[20px] space-x-2'>
               <span className='bg-[#EDF1FC] text-[#1A3AA9] px-2 py-1'>Eco-friendly Roofing</span>
               <span className='bg-[#E0F5E9] text-[#186D4B] px-2 py-1'>Cost-Saving Solutions</span>
             </div>
@@ -84,7 +84,7 @@ function CurrentProject() {
         </div>
       </div>
 
-      <div className='my-8  lg:my-16 xl:my-20 relative w-full h-[450px] lg:h-[550px] xl:h-[600px] overflow-hidden' >
+      <div className='my-8 lg:my-16 xl:my-20 relative w-full h-[450px] lg:h-[550px] xl:h-[600px] overflow-hidden' >
         <Image
           alt='project-image'
           className="object-cover z-0 project-t-image"

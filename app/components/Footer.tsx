@@ -123,7 +123,7 @@ export default Footer;
 
 const GetInTouch = () => {
   return (
-    <div className="space-y-5 md:space-y-7 lg:space-y-8 xl:space-y-10 container-spacing py-10 lg:py-[60px]">
+    <div className="hidden md:block space-y-5 md:space-y-7 lg:space-y-8 xl:space-y-10 container-spacing py-10 lg:py-[60px]">
       <h1 className="font-medium text-[44px] md:text-[92px] lg:text-[115px] xl:text-[162px] leading-none -tracking-[2.5%] text-black">
         Get in touch <br />
         <div className="start-center gap-x-1 md:gap-x-3 lg:gap-x-5 xl:gap-x-9 text-nowrap">

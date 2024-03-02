@@ -30,6 +30,7 @@ function Header() {
 
       <button className=" py-2 px-5 xl:py-3 xl:px-6 leading-6 gap-x-3 text-sm lg:text-base hidden md:between -tracking-[0.08px] bg-mirage-black text-white rounded-[30px] xl:rounded-[32px] stroke-[#ffff] hover:stroke-mirage-black form-button group after:bg-white ">
         <span className="group-hover:text-mirage-black">Schedule a Call</span>
+        
         <div className="relative w-4 h-4 lg:w-6 lg:h-6 group-hover:fill-mirage-black fill-white">
           <PhoneIcon />
         </div>

@@ -27,7 +27,7 @@ export default function Home() {
       boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
       scrollTrigger: {
         trigger: Home.current,
-        start: "1%",
+        start: "0.3%",
         toggleActions: "play reset resume reset"
       }
     })
