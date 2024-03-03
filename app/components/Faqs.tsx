@@ -93,11 +93,11 @@ function Faqs() {
       gsap.from(".FAQCardInner", {
         yPercent: 50,
         opacity: 0.4,
-        stagger: 0.2,
+        // stagger: 0.2,
         ease: "power3",
-        duration: 1,
+        duration: 1.1,
         scrollTrigger: {
-          trigger: ".QA-Container",
+          trigger: ".FAQCardInner",
           start: "top 70%",
         },
       });

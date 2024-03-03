@@ -91,7 +91,7 @@ html {
 }
 
 
-.nav-list-wrapper a:hover::before, .footer-links a:hover::before {
+.nav-list-wrapper a:hover::before, .nav-list-wrapper a:focus::before, .footer-links a:hover::before, .footer-links a:focus:before  {
   transform-origin: left;
   transform: scaleX(1);
   -webkit-transform: scaleX(1);

@@ -15,6 +15,60 @@ import {
 
 
 gsap.registerPlugin(ScrollTrigger)
+
+const GetInTouch = () => {
+
+  const GetInTouchRef = React.useRef(null)
+
+  useGSAP(() => {
+    gsap.to('.footer-image', {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      duration: 0.7,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".footer-image",
+        start: 'top 75%',
+      }
+    })
+  }, { scope: GetInTouchRef })
+
+  return (
+    <div className="hidden md:block space-y-5 md:space-y-7 lg:space-y-8 xl:space-y-10 container-spacing py-10 lg:py-[60px]" ref={GetInTouchRef}>
+      <h1 className="font-medium text-[44px] md:text-[92px] lg:text-[115px] xl:text-[162px] leading-none -tracking-[2.5%] text-black">
+        Get in touch <br />
+        <div className="start-center gap-x-1 md:gap-x-3 lg:gap-x-5 xl:gap-x-9 text-nowrap">
+          <span>With us</span>
+          <div className="w-[70px] h-[55px] md:w-[155px] md:h-[100px] lg:w-[180px] lg:h-[130px] xl:w-[225px] xl:h-[166px] relative footer-image-container">
+            <Image
+              src="/assets/images/get-in-touch.png"
+              alt="get-in-touch-image"
+              fill
+              priority
+              quality={100}
+              className="object-cover object-center footer-image"
+            />
+          </div>{" "}
+          <span>Today</span>
+        </div>
+      </h1>
+
+      <div className="grid place-content-end">
+        <div className="py-2 lg:py-3 xl:py-4 border-b-2 border-black between gap-x-2 xl:gap-x-3 min-w-[170px] md:min-w-[270px] lg:min-w-[360px] xl:min-w-[440px]">
+          <input
+            placeholder="Enter your email"
+            type="email"
+            className="border-none flex-1 outline-none basis-3/4 text-base lg:text-lg font-normal leading-[30px] -tracking-[0.5%] text-[#505050]"
+          />
+
+          <span className="w-fit stroke-black">
+            <ArrowRight />
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 function Footer() {
 
   const FooterRef = React.useRef(null)
@@ -120,56 +174,3 @@ function Footer() {
 }
 
 export default Footer;
-
-const GetInTouch = () => {
-
-  const GetInTouchRef = React.useRef(null)
-
-  useGSAP(() => {
-    gsap.to('.footer-image', {
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      duration: 0.8,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: ".footer-image",
-        start: 'top 75%',
-      }
-    })
-  }, { scope: GetInTouchRef })
-
-  return (
-    <div className="hidden md:block space-y-5 md:space-y-7 lg:space-y-8 xl:space-y-10 container-spacing py-10 lg:py-[60px]" ref={GetInTouchRef}>
-      <h1 className="font-medium text-[44px] md:text-[92px] lg:text-[115px] xl:text-[162px] leading-none -tracking-[2.5%] text-black">
-        Get in touch <br />
-        <div className="start-center gap-x-1 md:gap-x-3 lg:gap-x-5 xl:gap-x-9 text-nowrap">
-          <span>With us</span>
-          <div className="w-[70px] h-[55px] md:w-[155px] md:h-[100px] lg:w-[180px] lg:h-[130px] xl:w-[225px] xl:h-[166px] relative footer-image-container">
-            <Image
-              src="/assets/images/get-in-touch.png"
-              alt="get-in-touch-image"
-              fill
-              priority
-              quality={100}
-              className="object-cover object-center footer-image"
-            />
-          </div>{" "}
-          <span>Today</span>
-        </div>
-      </h1>
-
-      <div className="grid place-content-end">
-        <div className="py-2 lg:py-3 xl:py-4 border-b-2 border-black between gap-x-2 xl:gap-x-3 min-w-[170px] md:min-w-[270px] lg:min-w-[360px] xl:min-w-[440px]">
-          <input
-            placeholder="Enter your email"
-            type="email"
-            className="border-none flex-1 outline-none basis-3/4 text-base lg:text-lg font-normal leading-[30px] -tracking-[0.5%] text-[#505050]"
-          />
-
-          <span className="w-fit stroke-black">
-            <ArrowRight />
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-};
