@@ -31,10 +31,13 @@ function Services() {
       scrollTrigger: {
         trigger: ".ServiceHeaderContainer",
         scrub: 0.8,
+        start: "bottom 99%",
         end: "top 15%",
+        markers: true,
       },
       opacity: 0.4,
       stagger: 0.5,
+    
     })
 
 

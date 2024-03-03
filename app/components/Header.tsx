@@ -36,7 +36,7 @@ function Header() {
         </div>
       </button>
 
-      <button className="start-center md:hidden gap-x-2 uppercase font-medium leading-[19.2px] text-base text-[#121212]">
+      <button className="start-center md:hidden gap-x-2 uppercase font-medium leading-[19.2px] text-base text-[#121212] border-none hover:bg-opacity-50">
         <Hamburger />
 
         <span>menu</span>

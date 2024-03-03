@@ -28,11 +28,11 @@ function HeroSection() {
     //     ease: 'none',
     //   })
 
-    //   gsap.from(".left-section", {
-    //     opacity: 0.1,
-    //     yPercent: 6,
-    //     duration: 1.5,
-    //   });
+      gsap.from(".left-section", {
+        opacity: 0.1,
+        yPercent: 6,
+        duration: 1.5,
+      });
 
      
     },{ scope: HeroSectionRef }
