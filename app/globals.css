@@ -158,3 +158,8 @@ html {
 .footer-image-container > * {
   clip-path: polygon(0 0, 0 0, 0 0, 0 0)
 }
+
+.swiper_container {
+  border:2px solid red !important;
+  display: flex;
+}

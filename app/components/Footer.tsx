@@ -30,6 +30,8 @@ const GetInTouch = () => {
         start: 'top 75%',
       }
     })
+
+    
   }, { scope: GetInTouchRef })
 
   return (
@@ -89,8 +91,8 @@ function Footer() {
       <GetInTouch />
 
       <div className="bg-[#070A0E] pt-7 md:pt-11 lg:pt-[50px] xl:pt-[60px] container-spacing text-white footer-section2" id="Contact">
-        <div className="space-y-5 md:space-y-4 xl:space-y-5 font-medium">
-          <p className="text-5xl md:text-7xl xl:text-8xl leading-[45px] md:leading-[70px] xl:leading-[85.92px] -tracking-[2.5%]">
+        <div className="space-y-5 md:space-y-4 xl:space-y-5 font-medium ">
+          <p className="text-5xl md:text-7xl xl:text-8xl leading-[45px] md:leading-[70px] xl:leading-[85.92px] -tracking-[2.5%] header-text ">
             Let's create <br /> magic together{" "}
           </p>
 

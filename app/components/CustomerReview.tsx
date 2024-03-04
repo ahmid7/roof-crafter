@@ -1,6 +1,13 @@
 import React from "react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Pagination, Navigation, FreeMode } from 'swiper/modules';
+
 import { Stars, ButtonLeft, ButtonRight } from "./svgs";
+
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/free-mode'
 
 type ReviewProps = {
   paragraph: string;
@@ -82,8 +89,8 @@ function CustomerReview() {
         </p>
       </div>
 
-      <div className="w-full overflow-x-hidden">
-        <div className="flex items-start flex-nowrap gap-x-6 md:gap-x-8">
+      <div className="w-full">
+        {/* <div className="flex items-start flex-nowrap gap-x-6 md:gap-x-8">
           {ReviewsData.map((review, index) => {
             return (
               <div className="min-w-[500px] xl:min-w-[600px]" key={index + 10}>
@@ -96,7 +103,36 @@ function CustomerReview() {
               </div>
             );
           })}
-        </div>
+        </div> */}
+
+        <Swiper
+          // loop={ true }
+          // grabCursor={ true }
+          // slidesPerView={'auto'}
+          // className="swiper_container flex items-start flex-nowrap gap-x-6 md:gap-x-8"
+          
+          freeMode={ true }
+          pagination= {{
+            clickable: true
+          }}
+          modules= {[ FreeMode, Pagination ]}
+          // breakpoints={}
+          slidesPerView={ 3 }
+          spaceBetween={ 50 }
+        >  
+          {ReviewsData.map((review, index) => {
+              return (
+                <SwiperSlide className="min-w-[500px] xl:min-w-[600px]" key={index + 10}>
+                  <Review
+                    paragraph={review.paragraph}
+                    name={review.name}
+                    titleHeld={review.title}
+                    imageSrc={review.imageSrc}
+                  />
+                </SwiperSlide>
+              );
+            })}
+        </Swiper>
       </div>
 
       <div className="mt-7 lg:mt-9 xl:mt-12 flex justify-between items-center">
