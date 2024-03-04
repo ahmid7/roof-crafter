@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination, Navigation, FreeMode } from 'swiper/modules';
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Pagination, Navigation, FreeMode, } from 'swiper/modules';
 
 import { Stars, ButtonLeft, ButtonRight } from "./svgs";
 
@@ -77,6 +77,18 @@ const Review = ({ paragraph, name, titleHeld, imageSrc }: ReviewProps) => {
 };
 
 function CustomerReview() {
+  const [swiper, setSwiper ] = React.useState(null)
+
+
+  const nextTo = () => {
+    swiper.slideNext()
+  }
+
+  const prevTo = () => {
+    swiper.slidePrev()
+  }
+
+
   return (
     <section className="container-spacing pt-3 md:pt-0 pb-10 md:pb-8 lg:pb-[60px] ">
       <div className="text-center Header-Paragraph-Section">
@@ -90,35 +102,23 @@ function CustomerReview() {
       </div>
 
       <div className="w-full">
-        {/* <div className="flex items-start flex-nowrap gap-x-6 md:gap-x-8">
-          {ReviewsData.map((review, index) => {
-            return (
-              <div className="min-w-[500px] xl:min-w-[600px]" key={index + 10}>
-                <Review
-                  paragraph={review.paragraph}
-                  name={review.name}
-                  titleHeld={review.title}
-                  imageSrc={review.imageSrc}
-                />
-              </div>
-            );
-          })}
-        </div> */}
 
         <Swiper
-          // loop={ true }
-          // grabCursor={ true }
-          // slidesPerView={'auto'}
-          // className="swiper_container flex items-start flex-nowrap gap-x-6 md:gap-x-8"
-          
           freeMode={ true }
+          loop= { true }
           pagination= {{
-            clickable: true
+            clickable: true,
+            el: ".swiper-custom-pagination"
           }}
-          modules= {[ FreeMode, Pagination ]}
+          onSwiper={(s) => {
+            console.log('initialize swiper', s)
+            setSwiper(s)
+          }}
+          modules= {[ FreeMode, Pagination, Navigation ]}
           // breakpoints={}
           slidesPerView={ 3 }
-          spaceBetween={ 50 }
+          spaceBetween={ 32 }
+          
         >  
           {ReviewsData.map((review, index) => {
               return (
@@ -132,23 +132,21 @@ function CustomerReview() {
                 </SwiperSlide>
               );
             })}
+
+          <div className="mt-7 lg:mt-9 xl:mt-12 flex justify-between items-center">
+            <div className="swiper-custom-pagination flex items-center gap-x-1.5"/>
+
+            <div className="gap-x-[15px] flex items-center swiper-nav-btns">
+              <button onClick={ prevTo }>
+                <ButtonLeft />
+              </button>
+
+              <button onClick={ nextTo }>
+                <ButtonRight />
+              </button>
+            </div>
+          </div>
         </Swiper>
-      </div>
-
-      <div className="mt-7 lg:mt-9 xl:mt-12 flex justify-between items-center">
-        <div className="[&_span]:w-2 [&_span]:h-2 [&_span]:rounded-full [&_span]:bg-[#E0E0E0] flex gap-x-2">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <div className="gap-x-[15px] flex items-center">
-          <ButtonLeft />
-
-          <ButtonRight />
-        </div>
       </div>
     </section>
   );
