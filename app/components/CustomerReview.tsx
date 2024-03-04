@@ -102,7 +102,7 @@ function CustomerReview() {
       </div>
 
       <div className="w-full">
-
+        {/*  swiper containier */}
         <Swiper
           freeMode={ true }
           loop= { true }
@@ -115,14 +115,18 @@ function CustomerReview() {
             setSwiper(s)
           }}
           modules= {[ FreeMode, Pagination, Navigation ]}
-          // breakpoints={}
-          slidesPerView={ 3 }
-          spaceBetween={ 32 }
-          
+          slidesPerView={1}
+          spaceBetween={10}
+          breakpoints={{
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 32
+            }
+          }}
         >  
           {ReviewsData.map((review, index) => {
               return (
-                <SwiperSlide className="min-w-[500px] xl:min-w-[600px]" key={index + 10}>
+                <SwiperSlide className="w-full md:min-w-[500px] xl:min-w-[600px]" key={index + 10}>
                   <Review
                     paragraph={review.paragraph}
                     name={review.name}
@@ -134,8 +138,10 @@ function CustomerReview() {
             })}
 
           <div className="mt-7 lg:mt-9 xl:mt-12 flex justify-between items-center">
-            <div className="swiper-custom-pagination flex items-center gap-x-1.5"/>
-
+            {/* pagination  */}
+            <div className="swiper-custom-pagination flex items-center gap-x-1 md:gap-x-1.5"/>
+            
+            {/* swiper - buttons */}
             <div className="gap-x-[15px] flex items-center swiper-nav-btns">
               <button onClick={ prevTo }>
                 <ButtonLeft />
