@@ -53,7 +53,7 @@ type QuestionProps = {
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Question = ({ image, question, answer }: QuestionProps) => {
+const Question = ({ image, question, answer }: QuestionProps ) => {
   return (
     <div className="FAQCardContainer overflow-hidden">
       <div className="FAQCardInner">
@@ -88,21 +88,21 @@ const Question = ({ image, question, answer }: QuestionProps) => {
 function Faqs() {
   const FAQsRef = React.useRef(null);
 
-  useGSAP(
-    () => {
-      gsap.from(".FAQCardInner", {
+  useGSAP(() => {
+    const FAQCardsInner = gsap.utils.toArray(".FAQCardInner")
+
+    FAQCardsInner.forEach(( card ) => {
+      gsap.from(card, {
         yPercent: 50,
         opacity: 0.4,
-        // stagger: 0.2,
-        ease: "power3",
-        duration: 1.1,
+        duration: 0.5,
         scrollTrigger: {
-          trigger: ".FAQCardInner",
+          trigger: card,
           start: "top 70%",
         },
       });
-    },
-    { scope: FAQsRef }
+    })
+    },{ scope: FAQsRef }
   );
 
   return (
