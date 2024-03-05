@@ -86,6 +86,10 @@ html {
   transition: transform 0.3s ease-in-out;
 }
 
+.mobile-nav-list a::before {
+  background-color: white;
+}
+
 .footer-links a::before {
   background-color: #fff;
 }
@@ -112,7 +116,6 @@ html {
 }
 
 .form-button::after {
-  /* border-radius: 32px; */
   display: inline-block;
   content: "";
   height: 100%;
@@ -159,7 +162,3 @@ html {
   clip-path: polygon(0 0, 0 0, 0 0, 0 0)
 }
 
-.swiper_container {
-  border:2px solid red !important;
-  display: flex;
-}

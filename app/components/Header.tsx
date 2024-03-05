@@ -36,17 +36,11 @@ function Header() {
         </div>
       </button>
 
-      <button className="start-center md:hidden gap-x-2 uppercase font-medium leading-[19.2px] text-base text-[#121212] border-none hover:bg-opacity-50">
+      <button className="start-center md:hidden gap-x-2 uppercase font-medium leading-[19.2px] text-base text-[#121212] border-none hover:bg-opacity-50 menu-button">
         <Hamburger />
 
         <span>menu</span>
       </button>
-
-      <div className="menu-overlay md:hidden fixed z-50 top-0 right-0 h-full w-full border-2 border-red-900">
-        <div className="menu-inner">
-          
-        </div>
-      </div>
     </header>
   );
 }
