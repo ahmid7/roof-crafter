@@ -14,23 +14,10 @@ function HeroSection() {
   const HeroSectionImageRef = React.useRef(null)
 
   useGSAP( () => {
-    // const heightDiff = HeroSectionImageRef.current.offsetHeight - HeroSectionImageRef.current.parentElement.offsetHeight
-    
-    // console.log(heightDiff)
 
-    //   gsap.fromTo(HeroSectionImageRef.current, { y: -heightDiff }, {
-    //     scrollTrigger: {
-    //       trigger: HeroSectionImageRef.current,
-    //       scrub: true,
-    //       markers: true,
-    //     },
-    //     y: 0,
-    //     ease: 'none',
-    //   })
-
-      gsap.from(".left-section", {
-        opacity: 0.1,
-        yPercent: 6,
+      gsap.to(".left-section", {
+        opacity: 1,
+        y:0,
         duration: 1.5,
       });
 
@@ -41,7 +28,7 @@ function HeroSection() {
   return (
     <section className="flex flex-col md:flex-row h-full" ref={HeroSectionRef}>
       <Header />
-      <div className="space-y-11 xl:space-y-[60px] pt-24 xl:pt-[114px] basis-1/2 container-spacing left-section">
+      <div className="space-y-11 xl:space-y-[60px] pt-24 xl:pt-[114px] translate-y-[6%] opacity-10 basis-1/2 container-spacing left-section">
         <div className="space-y-5 xl:space-y-6 pr-0 lg:pr-16 xl:pr-[87px]">
           <h2 className="header-style1">
             Trusted Roofing Services for Your Home
