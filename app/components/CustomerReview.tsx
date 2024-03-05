@@ -87,7 +87,6 @@ function CustomerReview() {
     swiper.slidePrev()
   }
 
-
   return (
     <section className="container-spacing pt-3 md:pt-0 pb-10 md:pb-8 lg:pb-[60px] ">
       <div className="text-center Header-Paragraph-Section">
