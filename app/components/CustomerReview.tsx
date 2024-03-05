@@ -1,9 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-
 import React from "react";
 import Image from "next/image";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, FreeMode, } from 'swiper/modules';
 
 import { Stars, ButtonLeft, ButtonRight } from "./svgs";
@@ -80,11 +77,9 @@ const Review = ({ paragraph, name, titleHeld, imageSrc }: ReviewProps) => {
 };
 
 function CustomerReview() {
-  const [swiper, setSwiper ] = React.useState(null)
-
+  const [swiper, setSwiper ] = React.useState<any>(null)
 
   const nextTo = () => {
-    // @ts-nocheck
     swiper.slideNext()
   }
 
@@ -114,8 +109,7 @@ function CustomerReview() {
             clickable: true,
             el: ".swiper-custom-pagination"
           }}
-          onSwiper={(s) => {
-            console.log('initialize swiper', s)
+          onSwiper={(s:any) => {
             setSwiper(s)
           }}
           modules= {[ FreeMode, Pagination, Navigation ]}
@@ -128,6 +122,7 @@ function CustomerReview() {
             }
           }}
         >  
+          {/* array of swiper item */}
           {ReviewsData.map((review, index) => {
               return (
                 <SwiperSlide className="w-full md:min-w-[500px] xl:min-w-[600px]" key={index + 10}>
