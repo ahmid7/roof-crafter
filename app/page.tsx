@@ -39,13 +39,12 @@ export default function Home() {
       ease: "power1.out",
       scrollTrigger: {
         trigger: '.footer-section2',
-        start: "top 5%",
+        start: "top 7%",
         toggleActions: "play reverse resume reverse",
       }
     })
 
     // headers and paragraphs text animation
-
     HeaderWithParagraphs.forEach((section, index) => {
       const headerWithParagraph = gsap.utils.selector(section!)
       
@@ -68,33 +67,40 @@ export default function Home() {
       })
     })
 
-    // overlay-menu
+    // hamburger-menu
     const menuButton = document.querySelector(".menu-button")
-    const menuClose = document.querySelector(".menu-close")
 
-    const tl = gsap.timeline({ paused: true, overwrite: "auto" })
+    // overlay-menu and close buttons
+    const closeMenu = gsap.utils.toArray([".menu-close", ".menu-overlay"])
 
-    tl.to(menuButton, {
-      duration: 0.5,
-      bottom: "0px",
-      rotation: 0,
-      transformOrigin: "top center",
-      ease: "power3.inOut"
-    })
-
+    // menu open animation
     menuButton?.addEventListener("click", () => {
       gsap.set(".menu-overlay", {
         display:  "block"
       })
-    })
 
-    menuClose?.addEventListener("click", () => {
-      gsap.set(".menu-overlay", {
-        display:  "none"
+      gsap.fromTo(".menu-inner", { yPercent: -100 } , {
+        yPercent: 0,
+        duration: 0.6,
+        ease: "back.out"
       })
     })
 
-
+    // menu close animation
+    closeMenu.map((close:any, _) => {
+      close.addEventListener("click", () => {
+        gsap.set(".menu-overlay", {
+          display:  "none",
+          delay: 0.65
+        })
+  
+        gsap.fromTo(".menu-inner", { yPercent: 0 } , {
+          yPercent: -100,
+          duration: 0.6,
+          ease: "back.in"
+        })
+      })
+    })
   }, { scope: Home })
 
   return (
@@ -107,7 +113,7 @@ export default function Home() {
       <Footer />
 
       <div className="menu-overlay backdrop-blur-[8px] hidden md:hidden fixed z-50 -top-10 right-0 h-full w-full ">
-        <nav className="menu-inner m-3 p-5 bg-[#070A0E] space-y-7 w-4/5 rounded-2xl relative ">
+        <nav className="menu-inner top-0  m-3 p-5 bg-[#070A0E] space-y-7 w-4/5 rounded-2xl relative ">
           <div className="between">
             <div className="w-32 h-7">
               <Logo />
@@ -118,7 +124,7 @@ export default function Home() {
             </button>
           </div>
 
-          <ul className="gap-x-4  space-y-7 text-white nav-list-wrapper mobile-nav-list leading-6 text-xl -tracking-[0.08px] [&_li]:text-center [&_li]:py-1">
+          <ul className="gap-x-4 space-y-7 text-white nav-list-wrapper mobile-nav-list leading-6 text-xl -tracking-[0.08px] [&_li]:text-center [&_li]:py-1">
             <li >
               <a  href="#">Home</a>
             </li>
