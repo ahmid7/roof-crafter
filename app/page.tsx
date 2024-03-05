@@ -32,14 +32,14 @@ export default function Home() {
         toggleActions: "play reset resume reset"
       }
     })
-
+    
     gsap.to(".header-container", {
       // backdropFilter:"blur(12px)",
       backgroundColor: "#FFF",
       ease: "power1.out",
       scrollTrigger: {
         trigger: '.footer-section2',
-        start: "top 7%",
+        start: "top 5%",
         toggleActions: "play reverse resume reverse",
       }
     })
@@ -73,11 +73,13 @@ export default function Home() {
     // overlay-menu and close buttons
     const closeMenu = gsap.utils.toArray([".menu-close", ".menu-overlay"])
 
+    // overlay menu 
+    const menuOverlay = document.querySelector(".menu-overlay")
+
     // menu open animation
     menuButton?.addEventListener("click", () => {
-      gsap.set(".menu-overlay", {
-        display:  "block"
-      })
+
+      menuOverlay?.classList.add("toggleShow")
 
       gsap.fromTo(".menu-inner", { yPercent: -100 } , {
         yPercent: 0,
@@ -89,15 +91,14 @@ export default function Home() {
     // menu close animation
     closeMenu.map((close:any, _) => {
       close.addEventListener("click", () => {
-        gsap.set(".menu-overlay", {
-          display:  "none",
-          delay: 0.65
-        })
   
         gsap.fromTo(".menu-inner", { yPercent: 0 } , {
           yPercent: -100,
           duration: 0.6,
-          ease: "back.in"
+          ease: "back.in",
+          onComplete: () => {
+            menuOverlay?.classList.remove("toggleShow")
+          }
         })
       })
     })
