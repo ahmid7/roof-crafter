@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
 import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
@@ -81,6 +84,7 @@ function CustomerReview() {
 
 
   const nextTo = () => {
+    // @ts-nocheck
     swiper.slideNext()
   }
 

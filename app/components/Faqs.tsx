@@ -91,7 +91,7 @@ function Faqs() {
   useGSAP(() => {
     const FAQCardsInner = gsap.utils.toArray(".FAQCardInner")
 
-    FAQCardsInner.forEach(( card ) => {
+    FAQCardsInner.forEach(( card:any ) => {
       gsap.from(card, {
         yPercent: 50,
         opacity: 0.4,
