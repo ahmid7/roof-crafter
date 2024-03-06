@@ -5,6 +5,7 @@ import Image from "next/image";
 import SplitType from 'split-type';
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+
 import { useGSAP } from '@gsap/react'
 
 import { 
@@ -20,24 +21,37 @@ function Services() {
 
   useGSAP(() => {
 
+    let mm = gsap.matchMedia(), breakPoint = 1028;
+
+    const text = new SplitType('.ServiceHeaderText', { types: 'chars' })
+
+    mm.add(
+      {
+        isDesktop: `(min-width: ${ breakPoint }px)`,
+        isTabletOrMobile: `(max-width: ${ breakPoint - 1 }px)`
+      },
+      ( context ) => {
+        let { isDesktop, isTabletOrMobile } = context;
+
+        gsap.from(text.chars, {
+          scrollTrigger: {
+            trigger: ".ServiceHeaderContainer",
+            scrub: 0.8,
+            start: "bottom 99%",
+            end: "top 15%",
+          },
+          opacity: 0.4,
+          stagger: 0.5,
+        
+        })
+      }
+    )
+
+    // format the numbers for the animation
     function formatNumber(value:any, decimals:number) {
       let s = (+value).toLocaleString('en-US').split(".");
       return decimals ? s[0] + "." + ((s[1] || "") + "00000000").substring(0, decimals) : s[0];
     }
-
-    const text = new SplitType('.ServiceHeaderText', { types: 'chars' })
-
-    gsap.from(text.chars, {
-      scrollTrigger: {
-        trigger: ".ServiceHeaderContainer",
-        scrub: 0.8,
-        start: "bottom 99%",
-        end: "top 15%",
-      },
-      opacity: 0.4,
-      stagger: 0.5,
-    
-    })
 
 
     gsap.from(".numbers", {
