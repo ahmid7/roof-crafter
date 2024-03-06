@@ -93,7 +93,7 @@ function Faqs() {
 
     FAQCardsInner.forEach(( card:any ) => {
       gsap.from(card, {
-        yPercent: 50,
+        yPercent: 70,
         opacity: 0.4,
         duration: 0.5,
         scrollTrigger: {
