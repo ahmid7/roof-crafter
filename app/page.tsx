@@ -12,13 +12,18 @@ import CustomerReview from "./components/CustomerReview";
 import Faqs from "./components/Faqs";
 import Footer from "./components/Footer";
 import { Logo } from "./components/svgs"
+import SplashScreen from "./components/SplashScreen"
 
 gsap.registerPlugin(ScrollTrigger)
+
 export default function Home() {
 
   const Home = React.useRef(null)
 
+  const [isPageReady, setIsPageReady] = React.useState(false)
   
+  console.log(isPageReady)
+
   useGSAP(() => {
     const HeaderWithParagraphs = gsap.utils.toArray(".Header-Paragraph-Section")
 
@@ -104,8 +109,13 @@ export default function Home() {
     })
   }, { scope: Home })
 
+  React.useEffect(() => {
+    setIsPageReady(true)
+  }, [isPageReady])
+
   return (
     <main className="font-bold text-3xl space-y-10 md:space-y-10 lg:space-y-[60px] 2xl:container 2xl:mx-auto" ref ={ Home }>
+      <SplashScreen />
       <HeroSection />
       <Services />
       <RecentProject />
