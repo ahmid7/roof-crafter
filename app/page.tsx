@@ -22,7 +22,6 @@ export default function Home() {
 
   const [isPageReady, setIsPageReady] = React.useState(false)
   
-  console.log(isPageReady)
 
   useGSAP(() => {
     const HeaderWithParagraphs = gsap.utils.toArray(".Header-Paragraph-Section")
@@ -115,7 +114,6 @@ export default function Home() {
 
   return (
     <main className="font-bold text-3xl space-y-10 md:space-y-10 lg:space-y-[60px] 2xl:container 2xl:mx-auto" ref ={ Home }>
-      <SplashScreen />
       <HeroSection />
       <Services />
       <RecentProject />
@@ -158,6 +156,8 @@ export default function Home() {
           </div>
         </nav>
       </div>
+
+      <SplashScreen />
     </main>
   );
 }
