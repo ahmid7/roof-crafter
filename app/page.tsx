@@ -111,21 +111,21 @@ export default function Home() {
     })
 
     // splash screen animation
-    // gsap.to(".splash-screen", {
-    //   height: '0vh',
-    //   duration: 1.5,
-    //   delay: 1.5,
-    //   onComplete: () => {
-    //     setIsScrollEnabled(false)
-    //     document.querySelector("body")?.classList.remove("body")
-    //     // hero-section animation 
-    //     gsap.to(".left-section", {
-    //       opacity: 1,
-    //       y:0,
-    //       duration: 1.5,
-    //     });
-    //   },
-    // })
+    gsap.to(".splash-screen", {
+      height: '0vh',
+      duration: 1.5,
+      delay: 1.5,
+      onComplete: () => {
+        setIsScrollEnabled(false)
+        document.querySelector("body")?.classList.remove("body")
+        // hero-section animation 
+        gsap.to(".left-section", {
+          opacity: 1,
+          y:0,
+          duration: 1.5,
+        });
+      },
+    })
   }, { scope: Home })
 
   React.useEffect(() => {
