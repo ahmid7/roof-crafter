@@ -53,7 +53,7 @@ function Services() {
       return decimals ? s[0] + "." + ((s[1] || "") + "00000000").substring(0, decimals) : s[0];
     }
 
-
+    // number counting animation
     gsap.from(".numbers", {
       textContent: 100,
       duration: 1.2,
@@ -70,6 +70,7 @@ function Services() {
       }
     }) 
 
+    // number direction animation
     gsap.from('.number-container-inner', {
       scrollTrigger: {
         trigger: '.numbers-container',

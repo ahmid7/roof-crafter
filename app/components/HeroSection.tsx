@@ -1,32 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Header from "./Header";
 import ContactForm from "./ContactForm";
 import { ButtonLeft, ButtonRight } from "./svgs";
 
 function HeroSection() {
-  const HeroSectionRef = React.useRef(null);
-
-  const HeroSectionImageRef = React.useRef(null)
-
-  useGSAP( () => {
-
-      gsap.to(".left-section", {
-        opacity: 1,
-        y:0,
-        duration: 1.5,
-      });
-
-     
-    },{ scope: HeroSectionRef }
-  );
-
   return (
-    <section className="flex flex-col md:flex-row h-full" ref={HeroSectionRef}>
+    <section className="flex flex-col md:flex-row h-full">
       <Header />
       <div className="space-y-11 xl:space-y-[60px] pt-24 xl:pt-[114px] translate-y-[6%] opacity-10 basis-1/2 container-spacing left-section">
         <div className="space-y-5 xl:space-y-6 pr-0 lg:pr-16 xl:pr-[87px]">
@@ -86,7 +67,7 @@ function HeroSection() {
 
       <div className="pt-6 px-5 md:pt-0 md:px-0 md:basis-1/2  md:h-inherit">
         <div className="relative w-full h-[469.88px] overflow-hidden md:h-full">
-          <div className="w-full h-[520px] hero-section-image" ref={ HeroSectionImageRef }>
+          <div className="w-full h-[520px] hero-section-image">
             <Image
               priority
               src="/assets/images/roofing.webp"

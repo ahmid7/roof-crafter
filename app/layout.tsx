@@ -36,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`text-mirage-black font-normal ${ neueMontreal.variable }`}>
-      <body className="">
+      <body className=" body">
         { children }
       </body>
     </html>

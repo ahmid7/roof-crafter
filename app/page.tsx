@@ -21,11 +21,10 @@ export default function Home() {
   const Home = React.useRef(null)
 
   const [isPageReady, setIsPageReady] = React.useState(false)
+  const [isScrollEnabled, setIsScrollEnabled] = React.useState(true)
 
   useGSAP(() => {
     const HeaderWithParagraphs = gsap.utils.toArray(".Header-Paragraph-Section")
-
-    // splash screen animation;
 
     // nav-bar header animation
     gsap.to(".header-container", {
@@ -71,9 +70,11 @@ export default function Home() {
           start: "top 80%"
         }
       })
-    })
-    
 
+      
+    })
+
+    
     // hamburger-menu
     const menuButton = document.querySelector(".menu-button")
 
@@ -109,10 +110,29 @@ export default function Home() {
       })
     })
 
+    // splash screen animation
+    // gsap.to(".splash-screen", {
+    //   height: '0vh',
+    //   duration: 1.5,
+    //   delay: 1.5,
+    //   onComplete: () => {
+    //     setIsScrollEnabled(false)
+    //     document.querySelector("body")?.classList.remove("body")
+    //     // hero-section animation 
+    //     gsap.to(".left-section", {
+    //       opacity: 1,
+    //       y:0,
+    //       duration: 1.5,
+    //     });
+    //   },
+    // })
   }, { scope: Home })
 
   React.useEffect(() => {
     setIsPageReady(true)
+    window.onload = () =>  {
+      window.scrollTo(0, 0);
+    };
   }, [isPageReady])
 
   return (
@@ -123,8 +143,8 @@ export default function Home() {
       <CustomerReview />
       <Faqs />
       <Footer />
-    
-      <SplashScreen />
+      <MobileMenu />
+      <SplashScreen isScrollEnabled={ isScrollEnabled }/>
     </main>
   );
 }
