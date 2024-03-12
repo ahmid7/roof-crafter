@@ -73,20 +73,20 @@ export default function Home() {
 
       
     })
-
     
     // hamburger-menu
-    const menuButton = document.querySelector(".menu-button")
+    // const menuButton = document.querySelector(".menu-button")
+    const menuButton: any = gsap.utils.toArray(".menu-button")
 
     // overlay-menu and close button array
     const closeMenu = gsap.utils.toArray([".menu-close", ".menu-overlay"])
 
     // overlay menu 
-    const menuOverlay = document.querySelector(".menu-overlay")
+    const menuOverlay: any = gsap.utils.toArray(".menu-overlay")
 
     // On menu open animation
-    menuButton?.addEventListener("click", () => {
-      menuOverlay?.classList.add("toggleShow")
+    menuButton[0]?.addEventListener("click", () => {
+      menuOverlay[0]?.classList.add("toggleShow")
 
       gsap.fromTo(".menu-inner", { yPercent: -100 } , {
         yPercent: 0,
@@ -104,7 +104,7 @@ export default function Home() {
           duration: 0.6,
           ease: "back.in",
           onComplete: () => {
-            menuOverlay?.classList.remove("toggleShow")
+            menuOverlay[0]?.classList.remove("toggleShow")
           }
         })
       })

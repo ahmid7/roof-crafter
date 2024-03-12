@@ -170,10 +170,6 @@ html {
   clip-path: polygon(0 0, 0 0, 0 0, 0 0);
 }
 
-.toggleHidden {
-  @apply hidden md:hidden;
-}
-
 .toggleShow {
   @apply block md:hidden;
 }
